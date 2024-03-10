@@ -1,0 +1,749 @@
+.containerLogin {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.upper-box {
+    flex: 15;
+    background-color: #D9D9D9;
+    position: relative;
+}
+
+.lower-box {
+    flex: 85;
+    background-color: #84BCC8;
+    position: relative;
+    overflow: hidden;
+}
+
+.giant-sycures {
+    position: absolute;
+    left: -25%;
+    top: -2%;
+    width: 80%;
+    height: auto;
+    z-index: 1;
+}
+
+.black-box {
+    background-color: #0D0A1A;
+    width: 45%;
+    height: 100%;
+    position: absolute;
+    right: 5%;
+    top: 0;
+    z-index: 2;
+}
+
+.darkblue-box {
+    background-color: #1F144B;
+    width: 51%;
+    height: 74%;
+    position: absolute;
+    right: 2%;
+    top: 0;
+    z-index: 3;
+    border-radius: 10px;
+    font-family: 'Jockey One';
+    font-weight: bold;
+    color: white;
+    z-index: 6;
+
+}
+
+.sycures-logo-login {
+    position: absolute;
+    height: auto;
+    width: 16%;
+    top: 1%;
+    right: 42.25%;
+    cursor: pointer;
+    border: transparent;
+    z-index: 4;
+}
+
+.button-about-login {
+    top: 6%;
+    left: -1%;
+    position: absolute;
+    padding: 12px 28px;
+    font-size: 3rem;
+    width: 49%;
+    height: 110px;
+    border: 6px solid #1F144B;
+    border-radius: 10px;
+    color: #1F144B;
+    cursor: pointer;
+    font-family: 'Jockey One';
+    font-weight: bold;
+    text-decoration: none;
+    background-color: rgba(31, 20, 75, 0.3);
+    z-index: 5;
+}
+
+.button-about-login:hover{
+    background-color: rgba(31, 20, 75, 0.6);
+}
+
+.button-help-login {
+    top: 24%;
+    left: -1%;
+    position: absolute;
+    padding: 12px 28px;
+    font-size: 3rem;
+    width: 49%;
+    height: 110px;
+    border: 6px solid #1F144B;
+    border-radius: 10px;
+    color: #1F144B;
+    cursor: pointer;
+    font-family: 'Jockey One';
+    font-weight: bold;
+    text-decoration: none;
+    background-color: rgba(31, 20, 75, 0.3);
+    z-index: 5;
+}
+
+.button-help-login:hover{
+    background-color: rgba(31, 20, 75, 0.6);
+}
+
+.button-contact-login {
+    top: 42%;
+    left: -1%;
+    position: absolute;
+    padding: 12px 28px;
+    font-size: 3rem;
+    width: 49%;
+    height: 110px;
+    border: 6px solid #1F144B;
+    border-radius: 10px;
+    color: #1F144B;
+    cursor: pointer;
+    font-family: 'Jockey One';
+    font-weight: bold;
+    text-decoration: none;
+    background-color: rgba(31, 20, 75, 0.3);
+    z-index: 5;
+}
+
+.button-contact-login:hover{
+    background-color: rgba(31, 20, 75, 0.6);
+}
+
+.label-email {
+    font-size: 3.2rem;
+    font-family: 'Jockey One';
+    font-weight: bold;
+    margin-top: 13%;
+    margin-left: 10%;
+    width: auto;
+}
+
+.input-style-email {
+    font-size: 3rem;
+    padding: 8px;
+    width: 77%;
+    margin-bottom: 6%;
+    margin-left: 10%;
+    font-family: 'Jockey One';
+    font-weight: bold;
+    color: #000000;
+    background-color: #B6B6B6;
+}
+
+.label-password {
+    left: 50%;
+    font-size: 3.2rem;
+    font-family: 'Jockey One';
+    font-weight: bold;
+    margin-top: 20%;
+    margin-left: 10%;
+    width: auto;
+}
+
+.input-style-password {
+    font-size: 3rem;
+    padding: 8px;
+    width: 77%;
+    margin-bottom: 1%;
+    margin-left: 10%;
+    font-family: 'Jockey One';
+    font-weight: bold;
+    color: #000000;
+    background-color: #B6B6B6;
+}
+
+.forgot-password{
+    margin-top: 1%;
+    margin-left: 63%;
+    font-size: 2rem;
+    font-family: 'Jockey One';
+}
+
+.p-login{
+    margin-top: 4%;
+    margin-left: 27%;
+    font-size: 2rem;
+    font-family: 'Jockey One';
+}
+
+.b-register{
+    cursor: pointer;
+    font-family: 'Jockey One';
+}
+
+.label-name {
+    position: absolute;
+    font-size: 3rem;
+    font-family: 'Jockey One';
+    font-weight: bold;
+    top: 13%;
+    margin-left: -4%;
+    width: auto;
+}
+
+.input-style-name {
+    font-size: 2.8rem;
+    padding: 8px;
+    width: 99%;
+    margin-left: -5%;
+    font-family: 'Jockey One';
+    font-weight: bold;
+    color: #000000;
+    background-color: #B6B6B6;
+}
+
+.label-age {
+    font-size: 3rem;
+    font-family: 'Jockey One';
+    font-weight: bold;
+    margin-top: 13%;
+    margin-left: -5%;
+    width: auto;
+}
+
+.input-style-age {
+    font-size: 2.8rem;
+    padding: 8px;
+    width: 99%;
+    margin-bottom: 0%;
+    margin-left: -5%;
+    font-family: 'Jockey One';
+    font-weight: bold;
+    color: #000000;
+    background-color: #B6B6B6;
+}
+
+.label-regEmail {
+    font-size: 3rem;
+    font-family: 'Jockey One';
+    font-weight: bold;
+    margin-top: 13%;
+    margin-left: -5%;
+    width: auto;
+}
+
+.input-style-regEmail {
+    font-size: 2.8rem;
+    padding: 8px;
+    width: 99%;
+    margin-bottom: 0%;
+    margin-left: -5%;
+    font-family: 'Jockey One';
+    font-weight: bold;
+    color: #000000;
+    background-color: #B6B6B6;
+}
+
+.label-regPass {
+    font-size: 3rem;
+    font-family: 'Jockey One';
+    font-weight: bold;
+    margin-top: 13%;
+    margin-left: -5%;
+    width: auto;
+}
+
+.input-style-regPass {
+    font-size: 2.8rem;
+    padding: 8px;
+    width: 99%;
+    margin-bottom: 0%;
+    margin-left: -5%;
+    font-family: 'Jockey One';
+    font-weight: bold;
+    color: #000000;
+    background-color: #B6B6B6;
+}
+
+.start-button-style-login {
+    position: absolute;
+    top: 110%;
+    left: 25%;
+    width: 55%;
+    height: 15%;
+    font-size: 3.5rem;
+    font-weight: bold;
+    font-family: 'Jockey One';
+    text-align: center;
+    border-radius: 50px;
+    color: #1F144B;
+    cursor: pointer;
+    z-index: 7;
+    transition: transform .4s ease;
+}
+
+.start-button-style-login:hover {
+    background-color: #1F144B; 
+    color: white;
+    transform: scale(1.05);
+}
+
+.robot-login {
+    position: absolute;
+    bottom: -8%;
+    left: 9%;
+    z-index: 6;
+}
+
+.blinking-eye-left {
+    top: 58.5%;
+    left: 19.2%;
+    width: 75px;
+    height: 75px;
+    background-color: #1F144B;
+    border-radius: 50%;
+    position: absolute;
+    animation: blinklogin 3s infinite alternate;
+    border: 1px solid #FFFFFF;
+    z-index: 6;
+}
+
+.blinking-eye-right {
+    top: 59.6%;
+    left: 24.1%;
+    width: 57px;
+    height: 57px;
+    background-color: #1F144B;
+    border-radius: 50%;
+    position: absolute;
+    animation: blinklogin 3s infinite alternate;
+    border: 1px solid #FFFFFF;
+    z-index: 6;
+}
+
+@keyframes blinklogin {
+    0% {
+        transform: scaleY(0) translateX(0) translateY(0);
+    }
+    25% {
+        transform: scaleY(1.2) scaleX(1.2) translateX(0%) translateY(-20px) translateY(20px);
+    }
+    50% {
+        transform: scaleY(1.2) scaleX(1.2) translateX(30%) translateY(-20%);
+    }
+    100% {
+        transform: scaleY(0) translateX(0) translateY(0);
+    }
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0) rotate(-45deg);
+    }
+    1.5625% {
+        transform: translateY(0) rotate(-44.765625deg);
+    }
+    3.125% {
+        transform: translateY(0) rotate(-44.53125deg);
+    }
+
+    4.6875% {
+        transform: translateY(0) rotate(-44.296875deg);
+    }
+
+    6.25% {
+        transform: translateY(0) rotate(-44.0625deg);
+    }
+
+    7.8125% {
+        transform: translateY(0) rotate(-43.828125deg);
+    }
+
+    9.375% {
+        transform: translateY(0) rotate(-43.59375deg);
+    }
+
+    10.9375% {
+        transform: translateY(0) rotate(-43.359375deg);
+    }
+
+    12.5% {
+        transform: translateY(0) rotate(-43.125deg);
+    }
+
+    14.0625% {
+        transform: translateY(0) rotate(-42.890625deg);
+    }
+
+    15.625% {
+        transform: translateY(0) rotate(-42.65625deg);
+    }
+
+    17.1875% {
+        transform: translateY(0) rotate(-42.421875deg);
+    }
+
+    18.75% {
+        transform: translateY(0) rotate(-42.1875deg);
+    }
+
+    20.3125% {
+        transform: translateY(0) rotate(-41.953125deg);
+    }
+
+    21.875% {
+        transform: translateY(0) rotate(-41.71875deg);
+    }
+
+    23.4375% {
+        transform: translateY(0) rotate(-41.484375deg);
+    }
+
+    25% {
+        transform: translateY(0) rotate(-41.25deg);
+    }
+
+    26.5625% {
+        transform: translateY(0) rotate(-41.015625deg);
+    }
+
+    28.125% {
+        transform: translateY(0) rotate(-40.78125deg);
+    }
+
+    29.6875% {
+        transform: translateY(0) rotate(-40.546875deg);
+    }
+
+    31.25% {
+        transform: translateY(0) rotate(-40.3125deg);
+    }
+
+    32.8125% {
+        transform: translateY(0) rotate(-40.078125deg);
+    }
+
+    34.375% {
+        transform: translateY(0) rotate(-39.84375deg);
+    }
+
+    35.9375% {
+        transform: translateY(0) rotate(-39.609375deg);
+    }
+
+    37.5% {
+        transform: translateY(0) rotate(-39.375deg);
+    }
+
+    39.0625% {
+        transform: translateY(0) rotate(-39.140625deg);
+    }
+
+    40.625% {
+        transform: translateY(0) rotate(-38.90625deg);
+    }
+
+    42.1875% {
+        transform: translateY(0) rotate(-38.671875deg);
+    }
+
+    43.75% {
+        transform: translateY(0) rotate(-38.4375deg);
+    }
+
+    45.3125% {
+        transform: translateY(0) rotate(-38.203125deg);
+    }
+
+    46.875% {
+        transform: translateY(0) rotate(-37.96875deg);
+    }
+
+    48.4375% {
+        transform: translateY(0) rotate(-37.734375deg);
+    }
+
+    50% {
+        transform: translateY(0) rotate(-37.5deg);
+    }
+
+    51.5625% {
+        transform: translateY(0) rotate(-37.265625deg);
+    }
+
+    53.125% {
+        transform: translateY(0) rotate(-37.03125deg);
+    }
+
+    54.6875% {
+        transform: translateY(0) rotate(-36.796875deg);
+    }
+
+    56.25% {
+        transform: translateY(0) rotate(-36.5625deg);
+    }
+
+    57.8125% {
+        transform: translateY(0) rotate(-36.328125deg);
+    }
+
+    59.375% {
+        transform: translateY(0) rotate(-36.09375deg);
+    }
+
+    60.9375% {
+        transform: translateY(0) rotate(-35.859375deg);
+    }
+
+    62.5% {
+        transform: translateY(0) rotate(-35.625deg);
+    }
+
+    64.0625% {
+        transform: translateY(0) rotate(-35.390625deg);
+    }
+
+    65.625% {
+        transform: translateY(0) rotate(-35.15625deg);
+    }
+
+    67.1875% {
+        transform: translateY(0) rotate(-34.921875deg);
+    }
+
+    68.75% {
+        transform: translateY(0) rotate(-34.6875deg);
+    }
+
+    70.3125% {
+        transform: translateY(0) rotate(-34.453125deg);
+    }
+
+    71.875% {
+        transform: translateY(0) rotate(-34.21875deg);
+    }
+
+    73.4375% {
+        transform: translateY(0) rotate(-33.984375deg);
+    }
+
+    75% {
+        transform: translateY(0) rotate(-33.75deg);
+    }
+
+    76.5625% {
+        transform: translateY(0) rotate(-33.515625deg);
+    }
+
+    78.125% {
+        transform: translateY(0) rotate(-33.28125deg);
+    }
+
+    79.6875% {
+        transform: translateY(0) rotate(-33.046875deg);
+    }
+
+    81.25% {
+        transform: translateY(0) rotate(-32.8125deg);
+    }
+
+    82.8125% {
+        transform: translateY(0) rotate(-32.578125deg);
+    }
+
+    84.375% {
+        transform: translateY(0) rotate(-32.34375deg);
+    }
+
+    85.9375% {
+        transform: translateY(0) rotate(-32.109375deg);
+    }
+
+    87.5% {
+        transform: translateY(0) rotate(-31.875deg);
+    }
+
+    89.0625% {
+        transform: translateY(0) rotate(-31.640625deg);
+    }
+
+    90.625% {
+        transform: translateY(0) rotate(-31.40625deg);
+    }
+
+    92.1875% {
+        transform: translateY(0) rotate(-31.171875deg);
+    }
+
+    93.75% {
+        transform: translateY(0) rotate(-30.9375deg);
+    }
+
+    95.3125% {
+        transform: translateY(0) rotate(-30.703125deg);
+    }
+
+    96.875% {
+        transform: translateY(0) rotate(-30.46875deg);
+    }
+
+    98.4375% {
+        transform: translateY(0) rotate(-30.234375deg);
+    }
+}
+
+.robot-login-rightarm {
+    top: 63%;
+    left: 10%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    z-index: 8;
+    animation: moveUpDown 1s infinite;
+}
+
+.robot-login-leftarm {
+    top: 55%;
+    left: 8.5%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    transform: scaleX(-1);
+    z-index: 8;
+}
+
+.login-register-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+  }
+  
+.login-register-button{
+    width: 35%;
+    height: auto;
+    font-size: 280%;
+    font-family: 'Jockey One';
+    font-weight: 700;
+    background-color: #D9D9D9;
+    color: #FFFFFF;
+    margin-top: 2%;
+    padding: 0;
+    margin-bottom: 7%;
+    cursor: pointer;
+    transition: filter .4s ease;
+}
+
+.form-container{
+    height: auto;
+    transition: filter .4s ease;
+
+}
+
+.active {
+    transform: scale(1.05); 
+    filter: brightness(60%);
+}
+
+.modal {
+    position: fixed;
+    font-family: 'Jockey One';
+    z-index: 1000;
+    left: 71%;
+    bottom: 1%;
+    width: 35%;
+    height: 10%;
+    animation: fadeOut 4s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+  
+  .modal-content {
+    background-color: green;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 55%;
+  }
+
+  .modal-content-already-use {
+    background-color: red;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 55%;
+  }
+
+  .modal-content-invalid {
+    background-color: red;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 55%;
+  }
+
+  .modal-content-loginsuccess {
+    background-color: green;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 55%;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .fade-in {
+    opacity: 1;
+    transition: opacity .8s ease-in;
+  }
+  
+  .fade-out {
+    opacity: 0;
+    transition: opacity .8s ease-out;
+  }

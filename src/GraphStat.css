@@ -1,0 +1,22 @@
+
+.dot {
+    transition: cx 1.5s ease, cy 1.5s ease;
+  }
+  
+  .line1 {
+    transition: y1 1.5s ease, x2 1.5s ease;
+  }
+  
+  .line2 {
+    transition: x1 1.5s ease, y2 1.5s ease;
+  }
+  
+  .line3 {
+    transition: x2 1.5s ease, y1 1.5s ease;
+  }
+  
+  .line4 {
+    transition: x1 1.5s ease, y2 1.5s ease;
+  }
+  
+  

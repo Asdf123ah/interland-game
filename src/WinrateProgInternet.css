@@ -1,0 +1,78 @@
+.grayBox1StatInternet{
+    background-color: #CFCECE;
+    text-align: center;
+    width: 75%;
+    height: 12%;
+    margin-top: 5%;
+    margin-left: 22%; 
+    display:  flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    position: absolute;
+    top: 2%;
+    z-index: 1;
+  }
+
+  .whiteBox1StatInternet{
+    background-color: #FFFFFF;
+    text-align: center;
+    width: 96%;
+    height: 72%;
+    margin-top: 1.2%;
+    margin-left: 0%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    position: absolute;
+    top: 0%;
+    z-index: 1;
+  }
+  
+  
+  .blueBox1StatInternet {
+    background-color: #1F144B;
+    width: calc(var(--background-size, 0%) * 9%);
+    height: 100%;
+    margin-top: 0%;
+    margin-left: 0%;
+    border-radius: 25px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+    padding: auto;
+    animation: fillAnimation 1.5s ease forwards;
+  }
+  
+  @keyframes fillAnimation {
+    from {
+      width: 0%;
+  
+    }
+    to {
+      width: var(--background-size, 0%);
+  
+    }
+  }
+  
+  
+  .label1Internet {
+    position: absolute;
+    top: 7%;
+    left: 24%;
+    font-family: 'Jockey One';
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1F144B;
+  }
+  .label2Internet {
+    position: absolute;
+    top: 7%;
+    right: 4%;
+    font-family: 'Jockey One';
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1F144B;
+  }

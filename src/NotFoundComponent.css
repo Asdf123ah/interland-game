@@ -1,0 +1,68 @@
+.center-box {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-image: url('./Photos/containerGameBlueBG.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+  }
+  
+  .content-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    background-color: #f9f9f9;
+    width: 40%;
+    height: 28%;
+    font-family: 'Jockey One';
+  }
+  
+  .title-not-found {
+    position: relative;
+    text-align: center;
+    width: auto;
+    height: auto;
+    top: 3%;
+    margin-top: 0%;
+    font-size: 2.5rem;
+    font-family: 'Jockey One';
+  }
+
+  .p-not-found {
+    position: relative;
+    text-align: center;
+    width: auto;
+    height: auto;
+    top: -10%;
+    margin-top: 0%;
+    font-size: 2rem;
+    font-family: 'Jockey One';
+  }
+
+
+  .backButtonNotFound {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 6.2%;
+    height: 11%;
+    background: url('./Photos/BackButtonImage.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: none;
+    transition: transform .4s ease;
+  }
+
+  .backButtonNotFound:hover {
+    transform: scale(1.1); 
+    filter: brightness(70%);
+  }
+  

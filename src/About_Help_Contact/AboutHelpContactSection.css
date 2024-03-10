@@ -1,0 +1,163 @@
+.containerAboutHelpContact {
+    background-color: #84BCC8;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.sycuresLogoGameAboutHelpContact {
+    position: absolute;
+    height: auto;
+    width: 28%;
+    top: 0%;
+    right: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.backButtonAboutHelpContact {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 6.2%;
+    height: 11%;
+    background: url('../Photos/BackButtonImage.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: none;
+    transition: transform .4s ease;
+}
+
+.backButtonAboutHelpContact:hover{
+    transform: scale(1.1); 
+    filter: brightness(70%);
+}   
+
+.whiteBoxBG {
+    position: relative;
+    background-color: rgb(255, 255, 255, 0.6);
+    width: 100%;
+    height: 55%;
+    margin-top: 17%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+}
+
+.whiteBox {
+    position: relative;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50px;
+    width: 70%;
+    height: 115%;
+    margin-top: 0%;
+    align-items: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+}
+
+.whiteBox1 {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50px 0px 0px 50px;
+    width: 50%;
+    height: 100%;
+    margin-top: 0%;
+    align-items: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+}
+
+.contact-robot {
+    position: absolute;
+    width: 90%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.blueBox {
+    position: absolute;
+    background-color: #1F144B;
+    border-radius: 0px 50px 50px 0px;
+    width: 50%;
+    height: 100%;
+    left: 50%;
+    margin-top: 0%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+}
+
+.blueBox h1 {
+    position: relative;
+    text-align: center;
+    font-size: 4rem;
+    font-family: 'Jockey One';
+    font-weight: bold;
+    margin-top: 12%;
+    margin-right: 35%;
+    color: #FFFFFF;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactRow {
+    display: flex;
+    align-items: center;
+    margin-top: 8%;
+}
+
+.contactRow p{
+    color: #FFFFFF;
+    font-size: 2rem;
+    font-family: 'Jockey One';
+}
+
+.envelope {
+    position: relative;
+    width: 10%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 8%;
+}
+
+.phone {
+    position: relative;
+    width: 10%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 8%;
+}
+
+.title {
+    position: relative;
+    text-align: center;
+    font-size: 4rem;
+    font-family: 'Jockey One';
+    font-weight: bold;
+    margin-top: 3%;
+    margin-bottom: 1%;
+    color: #1F144B;
+}
+
+.text {
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: auto;
+    font-size: 2.1rem;
+    font-family: 'Jockey One';
+    line-height: 4rem;
+    color: #1F144B;
+    padding: 2% 6%;
+}
