@@ -1,23 +1,8 @@
 /* Default styles */
-.splash-screen {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  background-color: #84BCC8;
-  cursor: pointer;
-}
 
-.image-splash {
-  width: 50vw;
-  height: auto;
-  animation: pulse 3s infinite;
-}
 
 /* Styles for screens(xs) */
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
 .splash-screen {
   display: flex;
   flex-direction: column;
@@ -104,6 +89,26 @@
   align-items: center;
   justify-content: center;
   width: 100vw; 
+  height: 100vh;
+  background-color: #84BCC8;
+  cursor: pointer;
+}
+
+.image-splash {
+  width: 50vw;
+  height: auto;
+  animation: pulse 3s infinite;
+}
+}
+
+/* Styles for screens(2xl) */
+@media screen and (min-width: 1536x) {
+.splash-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
   height: 100vh;
   background-color: #84BCC8;
   cursor: pointer;

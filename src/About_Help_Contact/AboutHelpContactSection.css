@@ -1,5 +1,5 @@
 /* Styles for screens(xs) */
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
 .containerAboutHelpContact {
     background-color: #84BCC8;
     width: 100vw;
