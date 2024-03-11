@@ -1,3 +1,850 @@
+/* Styles for screens(xs) */
+@media screen and (max-width: 640px) {
+.containerAboutHelpContact {
+    background-color: #84BCC8;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+
+.sycuresLogoGameAboutHelpContact {
+    position: absolute;
+    height: auto;
+    width: 50vw;
+    top: 3%;
+    right: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.backButtonAboutHelpContact {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 15%;
+    height: 10%;
+    background: url('../Photos/BackButtonImage.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: none;
+    transition: transform .4s ease;
+}
+
+.backButtonAboutHelpContact:hover{
+    transform: scale(1.1); 
+    filter: brightness(70%);
+}   
+
+.whiteBoxBG {
+    position: relative;
+    background-color: rgb(255, 255, 255, 0.6);
+    width: 100vw;
+    height: 50vh;
+    margin-top: 17%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+}
+
+.whiteBox {
+    position: relative;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50px;
+    width: 70vw;
+    height: 60vh;
+    margin-top: 0%;
+    align-items: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+    overflow-y: auto;
+}
+
+.whiteBox1 {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50px 0px 0px 50px;
+    width: 35vw;
+    height: 60vh;
+    margin-top: 0%;
+    align-items: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+}
+
+.contact-robot {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.blueBox {
+    position: absolute;
+    background-color: #1F144B;
+    border-radius: 0px 50px 50px 0px;
+    width: 35vw;
+    height: 60vh;
+    left: 50%;
+    margin-top: 0%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+}
+
+.blueBox h1 {
+    position: relative;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Jockey One';
+    font-weight: bold;
+    margin-top: 70%;
+    margin-right: 10%;
+    color: #FFFFFF;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactRow {
+    display: flex;
+    align-items: center;
+    margin-top: 15%;
+}
+
+.contactRow p{
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-family: 'Jockey One';
+}
+
+.envelope {
+    position: relative;
+    width: 10%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 8%;
+}
+
+.phone {
+    position: relative;
+    width: 10%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 8%;
+}
+
+.title {
+    position: relative;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Jockey One';
+    font-weight: bold;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    color: #1F144B;
+}
+
+.text {
+    height: 115%;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: auto;
+    font-size: 1.7rem;
+    font-family: 'Jockey One';
+    line-height: 2rem;
+    color: #1F144B;
+    padding: 2% 6%;
+}
+}
+
+/* Styles for screens(sm) */
+@media screen and (min-width: 640px) {
+.containerAboutHelpContact {
+    background-color: #84BCC8;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+
+.sycuresLogoGameAboutHelpContact {
+    position: absolute;
+    height: auto;
+    width: 53vw;
+    top: 3%;
+    right: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.backButtonAboutHelpContact {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 15%;
+    height: 10%;
+    background: url('../Photos/BackButtonImage.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: none;
+    transition: transform .4s ease;
+}
+
+.backButtonAboutHelpContact:hover{
+    transform: scale(1.1); 
+    filter: brightness(70%);
+}   
+
+.whiteBoxBG {
+    position: relative;
+    background-color: rgb(255, 255, 255, 0.6);
+    width: 100vw;
+    height: 50vh;
+    margin-top: 17%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+}
+
+.whiteBox {
+    position: relative;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50px;
+    width: 70vw;
+    height: 60vh;
+    margin-top: 0%;
+    align-items: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+    overflow-y: auto;
+}
+
+.whiteBox1 {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50px 0px 0px 50px;
+    width: 35vw;
+    height: 60vh;
+    margin-top: 0%;
+    align-items: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+}
+
+.contact-robot {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.blueBox {
+    position: absolute;
+    background-color: #1F144B;
+    border-radius: 0px 50px 50px 0px;
+    width: 35vw;
+    height: 60vh;
+    left: 50%;
+    margin-top: 0%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+}
+
+.blueBox h1 {
+    position: relative;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Jockey One';
+    font-weight: bold;
+    margin-top: 70%;
+    margin-right: 10%;
+    color: #FFFFFF;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactRow {
+    display: flex;
+    align-items: center;
+    margin-top: 15%;
+}
+
+.contactRow p{
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-family: 'Jockey One';
+}
+
+.envelope {
+    position: relative;
+    width: 10%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 8%;
+}
+
+.phone {
+    position: relative;
+    width: 10%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 8%;
+}
+
+.title {
+    position: relative;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Jockey One';
+    font-weight: bold;
+    margin-top: 2%;
+    margin-bottom: 6%;
+    color: #1F144B;
+}
+
+.text {
+    height: 115%;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: auto;
+    font-size: 1.7rem;
+    font-family: 'Jockey One';
+    line-height: 2rem;
+    color: #1F144B;
+    padding: 2% 6%;
+}
+}
+
+/* Styles for screens(md) */
+@media screen and (min-width: 768px) {
+.containerAboutHelpContact {
+    background-color: #84BCC8;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+
+.sycuresLogoGameAboutHelpContact {
+    position: absolute;
+    height: auto;
+    width: 47vw;
+    top: 3%;
+    right: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.backButtonAboutHelpContact {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 14%;
+    height: 10%;
+    background: url('../Photos/BackButtonImage.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: none;
+    transition: transform .4s ease;
+}
+
+.backButtonAboutHelpContact:hover{
+    transform: scale(1.1); 
+    filter: brightness(70%);
+}   
+
+.whiteBoxBG {
+    position: relative;
+    background-color: rgb(255, 255, 255, 0.6);
+    width: 100vw;
+    height: 50vh;
+    margin-top: 17%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+}
+
+.whiteBox {
+    position: relative;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50px;
+    width: 70vw;
+    height: 60vh;
+    margin-top: 0%;
+    align-items: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+    overflow-y: auto;
+}
+
+.whiteBox1 {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50px 0px 0px 50px;
+    width: 35vw;
+    height: 60vh;
+    margin-top: 0%;
+    align-items: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+}
+
+.contact-robot {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.blueBox {
+    position: absolute;
+    background-color: #1F144B;
+    border-radius: 0px 50px 50px 0px;
+    width: 35vw;
+    height: 60vh;
+    left: 50%;
+    margin-top: 0%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+}
+
+.blueBox h1 {
+    position: relative;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Jockey One';
+    font-weight: bold;
+    margin-top: 50%;
+    margin-right: 10%;
+    color: #FFFFFF;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactRow {
+    display: flex;
+    align-items: center;
+    margin-top: 15%;
+}
+
+.contactRow p{
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-family: 'Jockey One';
+}
+
+.envelope {
+    position: relative;
+    width: 10%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 8%;
+}
+
+.phone {
+    position: relative;
+    width: 10%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 8%;
+}
+
+.title {
+    position: relative;
+    text-align: center;
+    font-size: 3.2rem;
+    font-family: 'Jockey One';
+    font-weight: bold;
+    margin-top: 2%;
+    margin-bottom: 6%;
+    color: #1F144B;
+}
+
+.text {
+    height: 60vh;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: auto;
+    font-size: 1.7rem;
+    font-family: 'Jockey One';
+    line-height: 2rem;
+    color: #1F144B;
+    padding: 2% 6%;
+}
+}
+
+/* Styles for screens(lg) */
+@media screen and (min-width: 1024px) {
+.containerAboutHelpContact {
+    background-color: #84BCC8;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+
+.sycuresLogoGameAboutHelpContact {
+    position: absolute;
+    height: auto;
+    width: 38vw;
+    top: 3%;
+    right: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.backButtonAboutHelpContact {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 11%;
+    height: 10%;
+    background: url('../Photos/BackButtonImage.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: none;
+    transition: transform .4s ease;
+}
+
+.backButtonAboutHelpContact:hover{
+    transform: scale(1.1); 
+    filter: brightness(70%);
+}   
+
+.whiteBoxBG {
+    position: relative;
+    background-color: rgb(255, 255, 255, 0.6);
+    width: 100vw;
+    height: 50vh;
+    margin-top: 17%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+}
+
+.whiteBox {
+    position: relative;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50px;
+    width: 70vw;
+    height: 60vh;
+    margin-top: 0%;
+    align-items: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+    overflow-y: auto;
+}
+
+.whiteBox1 {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50px 0px 0px 50px;
+    width: 35vw;
+    height: 60vh;
+    margin-top: 0%;
+    align-items: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+}
+
+.contact-robot {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.blueBox {
+    position: absolute;
+    background-color: #1F144B;
+    border-radius: 0px 50px 50px 0px;
+    width: 35vw;
+    height: 60vh;
+    left: 50%;
+    margin-top: 0%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+}
+
+.blueBox h1 {
+    position: relative;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Jockey One';
+    font-weight: bold;
+    margin-top: 30%;
+    margin-right: 30%;
+    color: #FFFFFF;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactRow {
+    display: flex;
+    align-items: center;
+    margin-top: 15%;
+}
+
+.contactRow p{
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-family: 'Jockey One';
+}
+
+.envelope {
+    position: relative;
+    width: 10%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 8%;
+}
+
+.phone {
+    position: relative;
+    width: 10%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 8%;
+}
+
+.title {
+    position: relative;
+    text-align: center;
+    font-size: 3.6rem;
+    font-family: 'Jockey One';
+    font-weight: bold;
+    margin-top: 2%;
+    margin-bottom: 6%;
+    color: #1F144B;
+}
+
+.text {
+    height: 60vh;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: auto;
+    font-size: 1.9rem;
+    font-family: 'Jockey One';
+    line-height: 2.5rem;
+    color: #1F144B;
+    padding: 2% 6%;
+}
+}
+
+/* Styles for screens(xl) */
+@media screen and (min-width: 1280px) {
+.containerAboutHelpContact {
+    background-color: #84BCC8;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+
+.sycuresLogoGameAboutHelpContact {
+    position: absolute;
+    height: auto;
+    width: 33vw;
+    top: 3%;
+    right: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.backButtonAboutHelpContact {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 8%;
+    height: 10%;
+    background: url('../Photos/BackButtonImage.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: none;
+    transition: transform .4s ease;
+}
+
+.backButtonAboutHelpContact:hover{
+    transform: scale(1.1); 
+    filter: brightness(70%);
+}   
+
+.whiteBoxBG {
+    position: relative;
+    background-color: rgb(255, 255, 255, 0.6);
+    width: 100vw;
+    height: 50vh;
+    margin-top: 17%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+}
+
+.whiteBox {
+    position: relative;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50px;
+    width: 70vw;
+    height: 60vh;
+    margin-top: 0%;
+    align-items: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+    overflow-y: auto;
+}
+
+.whiteBox1 {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50px 0px 0px 50px;
+    width: 35vw;
+    height: 60vh;
+    margin-top: 0%;
+    align-items: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+}
+
+.contact-robot {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.blueBox {
+    position: absolute;
+    background-color: #1F144B;
+    border-radius: 0px 50px 50px 0px;
+    width: 35vw;
+    height: 60vh;
+    left: 50%;
+    margin-top: 0%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+}
+
+.blueBox h1 {
+    position: relative;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Jockey One';
+    font-weight: bold;
+    margin-top: 20%;
+    margin-right: 40%;
+    color: #FFFFFF;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactRow {
+    display: flex;
+    align-items: center;
+    margin-top: 15%;
+}
+
+.contactRow p{
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-family: 'Jockey One';
+}
+
+.envelope {
+    position: relative;
+    width: 10%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 8%;
+}
+
+.phone {
+    position: relative;
+    width: 10%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 8%;
+}
+
+.title {
+    position: relative;
+    text-align: center;
+    font-size: 3.7rem;
+    font-family: 'Jockey One';
+    font-weight: bold;
+    margin-top: 2%;
+    margin-bottom: 6%;
+    color: #1F144B;
+}
+
+.text {
+    height: 60vh;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: auto;
+    font-size: 1.9rem;
+    font-family: 'Jockey One';
+    line-height: 2.7rem;
+    color: #1F144B;
+    padding: 2% 6%;
+}
+}
+
+/* Styles for screens(2xl) */
+@media screen and (min-width: 1536px) {
 .containerAboutHelpContact {
     background-color: #84BCC8;
     width: 100vw;
@@ -12,7 +859,7 @@
 .sycuresLogoGameAboutHelpContact {
     position: absolute;
     height: auto;
-    width: 28%;
+    width: 29vw;
     top: 0%;
     right: 5%;
     left: 50%;
@@ -55,10 +902,11 @@
     background-color: rgba(255, 255, 255, 1);
     border-radius: 50px;
     width: 70%;
-    height: 115%;
+    height: 63vh;
     margin-top: 0%;
     align-items: center;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+    overflow-y: auto;
 }
 
 .whiteBox1 {
@@ -150,6 +998,7 @@
 }
 
 .text {
+    height: 63vh;
     position: relative;
     text-align: center;
     display: flex;
@@ -160,4 +1009,5 @@
     line-height: 4rem;
     color: #1F144B;
     padding: 2% 6%;
+}
 }
