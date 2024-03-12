@@ -245,19 +245,7 @@ function LoginForm() {
           >
             CONTACT
           </button>
-          <img src={RobotLogin} alt="robot login" className="robot-login" />
-          <div className="blinking-eye-left"></div>
-          <div className="blinking-eye-right"></div>
-          <img
-            src={RobotLoginArm}
-            alt="Robot Login Right Arm"
-            className="robot-login-rightarm"
-          ></img>
-          <img
-            src={RobotLoginArm}
-            alt="Robot Login Left Arm"
-            className="robot-login-leftarm"
-          ></img>
+
         </div>
         <img
           src={giantSycuresImage}
@@ -300,6 +288,19 @@ function LoginForm() {
               </div>
             </div>
           </div>
+          <img src={RobotLogin} alt="robot login" className="robot-login" />
+          <div className="blinking-eye-left"></div>
+          <div className="blinking-eye-right"></div>
+          <img
+            src={RobotLoginArm}
+            alt="Robot Login Right Arm"
+            className="robot-login-rightarm"
+          ></img>
+          <img
+            src={RobotLoginArm}
+            alt="Robot Login Left Arm"
+            className="robot-login-leftarm"
+          ></img>
         </div>
       </div>
       {showModalRegister && (
