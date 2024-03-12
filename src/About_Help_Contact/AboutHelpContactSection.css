@@ -100,10 +100,10 @@
 .blueBox h1 {
     position: relative;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: 'Jockey One';
     font-weight: bold;
-    margin-top: 70%;
+    margin-top: 110%;
     margin-right: 10%;
     color: #FFFFFF;
 }
@@ -121,7 +121,7 @@
 
 .contactRow p{
     color: #FFFFFF;
-    font-size: 1rem;
+    font-size: .7rem;
     font-family: 'Jockey One';
 }
 
@@ -129,7 +129,7 @@
     position: relative;
     width: 10%;
     height: auto;
-    margin-left: 10%;
+    margin-left: 5%;
     margin-right: 8%;
 }
 
@@ -137,7 +137,7 @@
     position: relative;
     width: 10%;
     height: auto;
-    margin-left: 10%;
+    margin-left: 5%;
     margin-right: 8%;
 }
 
@@ -153,15 +153,15 @@
 }
 
 .text {
-    height: 115%;
+    height: 60vh;
     position: relative;
     text-align: center;
     display: flex;
     justify-content: center;
     padding: auto;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     font-family: 'Jockey One';
-    line-height: 2rem;
+    line-height: 1.5rem;
     color: #1F144B;
     padding: 2% 6%;
 }
