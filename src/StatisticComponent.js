@@ -36,7 +36,7 @@ function StatisticComponent() {
     const [aveScore4, setAveScore4] = useState(null);
     const [aveTime4, setAveTime4] = useState(null);
 
-      useEffect(() => {
+    useEffect(() => {
     async function fetchUserStatusData() {
       try {
         // Make a request to your backend endpoint to trigger the generation of user status data
@@ -54,7 +54,7 @@ function StatisticComponent() {
 
     // Call the function to fetch user status data when the component mounts
     fetchUserStatusData();
-  }, []);
+    }, []);
 
     useEffect(() => {
         const fetchUserData = async () => {
@@ -203,8 +203,8 @@ function StatisticComponent() {
                                 </div>
                             </div>
                         </div>
-                        <div className='grayBox3Stat'>
-                            <div>
+                        <div className='grayBox3Stat'>  
+                            <div className='graph-div'>
                                 <GraphStat/>
                             </div>
                             <label className='label8'>OVERVIEW</label>
@@ -387,12 +387,11 @@ function StatisticComponent() {
     return (
         <div className='containerStat'>
             <Badges/>
-            <div className='whiteBoxStat'>
-                <div className='grayBoxStat'>
+            <div className='grayBoxStat'>
                     <button className='grayBoxStatbutton' onClick={handleBackButton}></button>
                     <p>{userName}'s Statistics</p>
-
-                </div>
+            </div>
+            <div className='whiteBoxStat'>
                 <div className='blueBoxStat'>
                     <div className='blueBoxStatdiv'>
                         <p

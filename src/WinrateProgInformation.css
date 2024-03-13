@@ -1,10 +1,10 @@
 .grayBox1StatInformation {
     background-color: #CFCECE;
     text-align: center;
-    width: 75%;
+    width: 76%;
     height: 12%;
-    margin-top: 5%;
-    margin-left: 22%; 
+    margin-top: 4%;
+    margin-left: 21%; 
     display:  flex;
     align-items: center;
     justify-content: center;
@@ -60,8 +60,8 @@
   
   .label1Information {
     position: absolute;
-    top: 7%;
-    left: 24%;
+    top: 6%;
+    left: 22%;
     font-family: 'Jockey One';
     font-size: 2rem;
     font-weight: bold;
@@ -69,10 +69,150 @@
   }
   .label2Information {
     position: absolute;
-    top: 7%;
-    right: 4%;
+    top: 6%;
+    right: 5%;
     font-family: 'Jockey One';
     font-size: 2rem;
     font-weight: bold;
     color: #1F144B;
   }
+
+  /* Styles for screens(xs) */
+@media screen and (max-width: 639px) {
+.grayBox1StatInformation {
+  background-color: #CFCECE;
+  text-align: center;
+  width: 245%;
+  height: 12%;
+  margin-top: 21%;
+  margin-left: 45%; 
+  display:  flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  position: absolute;
+  top: 2%;
+  z-index: 1;
+}
+
+.whiteBox1StatInformation    {
+  background-color: #FFFFFF;
+  text-align: center;
+  width: 98%;
+  height: 72%;
+  margin-top: 1.5%;
+  margin-left: 0%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  position: absolute;
+  top: 0%;
+  z-index: 1;
+}
+
+
+.blueBox1StatInformation {
+  background-color: #1F144B;
+  width: calc(var(--background-size, 0%) * 9%);
+  height: 100%;
+  margin-top: 0%;
+  margin-left: 0%;
+  border-radius: 25px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 1;
+  padding: auto;
+  animation: fillAnimation 1.5s ease forwards;
+}
+
+.label1Information {
+  position: absolute;
+  top: 9%;
+  left: 50%;
+  font-family: 'Jockey One';
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1F144B;
+}
+.label2Information {
+  position: absolute;
+  top: 9%;
+  left: 270%;
+  font-family: 'Jockey One';
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1F144B;
+}
+}
+
+/* Styles for screens(sm) */
+@media screen and (min-width: 640px) {
+.grayBox1StatInformation {
+  background-color: #CFCECE;
+  text-align: center;
+  width: 230%;
+  height: 12%;
+  margin-top: 16%;
+  margin-left: 44%; 
+  display:  flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  position: absolute;
+  top: 2%;
+  z-index: 1;
+}
+
+.whiteBox1StatInformation    {
+  background-color: #FFFFFF;
+  text-align: center;
+  width: 98%;
+  height: 72%;
+  margin-top: 1%;
+  margin-left: 0%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  position: absolute;
+  top: 0%;
+  z-index: 1;
+}
+
+
+.blueBox1StatInformation {
+  background-color: #1F144B;
+  width: calc(var(--background-size, 0%) * 9%);
+  height: 100%;
+  margin-top: 0%;
+  margin-left: 0%;
+  border-radius: 25px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 1;
+  padding: auto;
+  animation: fillAnimation 1.5s ease forwards;
+}
+
+.label1Information {
+  position: absolute;
+  top: 10%;
+  left: 45%;
+  font-family: 'Jockey One';
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #1F144B;
+}
+.label2Information {
+  position: absolute;
+  top: 10%;
+  left: 260%;
+  font-family: 'Jockey One';
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #1F144B;
+}
+}
