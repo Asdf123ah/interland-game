@@ -97,7 +97,7 @@ function CategorySelection() {
       </div>
       </div>
       <button className="stats-button" onClick={handleStatsButtonClick}>
-      <IoStatsChart style={{ color: '#84BCC8' }} />
+        <IoStatsChart className="stat-chart" />
       STATS
       </button>
       {showCongratulations && (<CongratulationModal onClose={handleCloseCongratulations} />)}

@@ -1,3 +1,728 @@
+/* Styles for screens(xs) */
+@media screen and (max-width: 639px) {
+.containerCategorySelection {
+  background-color: #84BCC8;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.sycuresLogoGameCategorySelection {
+  position: absolute;
+  width: 60vw;
+  height: auto;
+  top: 3%;
+  right: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.boxCategorySelectionBG {
+  position: relative;
+  background-color: rgb(255, 255, 255, 0.6);
+  width: 100vw;
+  height: 55%;
+  margin-top: 17%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+}
+
+.boxCategorySelection {
+  position: relative;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 50px;
+  width: 90vw;
+  height: 65vh;
+  margin-top: 0%;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+}
+
+.rowCategorySelection {
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1%;
+}
+  
+.backButtonCategorySelection {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  width: 15vw;
+  height: 7vh;
+  background: url('./Photos/BackButtonImage.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: none;
+  transition: transform .4s ease;
+}
+
+.backButtonCategorySelection:hover {
+  transform: scale(1.1); 
+  filter: brightness(70%);
+}
+
+.buttonCategorySelection {
+  position: relative;
+  width: 37vw;
+  height: 18vh;
+  padding: 10px;
+  font-size: 1rem;
+  font-family: 'Jockey One';
+  margin: .5rem;
+  margin-top: 3%;
+  color: white;
+  background-color: #1F144B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform .4s ease;
+}
+
+.buttonCategorySelection:hover{
+  transform: scale(1.1); 
+  filter: brightness(70%);
+}
+
+.popupInstruction {
+  position: relative;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 76vw;
+  height: auto;
+  padding: .3em;
+  margin-bottom: 18%;
+  background-color: #D9D9D9 ;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Jockey One';
+  color: #1F144B;
+}
+
+.buttons-container{
+  margin-top: 2%;
+}
+
+.stats-button {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  width: 15vw;
+  height: 7vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: none;
+  font-size: .9rem;
+  font-weight: bold;
+  font-family: 'Jockey One';
+  transition: transform .4s ease;
+}
+
+.stats-button:hover {
+  transform: scale(1.1); 
+  filter: brightness(70%);
+}
+
+.stat-chart{
+  color: #84BCC8;
+  font-size: 1.2rem
+}
+}
+
+/* Styles for screens(sm) */
+@media screen and (min-width: 640px) {
+.containerCategorySelection { 
+  background-color: #84BCC8;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+}
+
+.sycuresLogoGameCategorySelection {
+  position: absolute;
+  width: 50vw;
+  height: auto;
+  top: 3%;
+  right: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.boxCategorySelectionBG {
+  position: relative;
+  background-color: rgb(255, 255, 255, 0.6);
+  width: 100vw;
+  height: 55%;
+  margin-top: 17%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+}
+
+.boxCategorySelection {
+  position: relative;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 50px;
+  width: 90vw;
+  height: 65vh;
+  margin-top: 0%;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+}
+
+.rowCategorySelection {
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1%;
+}
+  
+.backButtonCategorySelection {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  width: 14vw;
+  height: 8vh;
+  background: url('./Photos/BackButtonImage.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: none;
+  transition: transform .4s ease;
+}
+
+.backButtonCategorySelection:hover {
+  transform: scale(1.1); 
+  filter: brightness(70%);
+}
+
+.buttonCategorySelection {
+  position: relative;
+  width: 39vw;
+  height: 18vh;
+  padding: 10px;
+  font-size: 1.6rem;
+  font-family: 'Jockey One';
+  margin: .5rem;
+  margin-top: 3%;
+  color: white;
+  background-color: #1F144B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform .4s ease;
+}
+
+.buttonCategorySelection:hover{
+  transform: scale(1.1); 
+  filter: brightness(70%);
+}
+
+.popupInstruction {
+  position: relative;
+  top: 17%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: auto;
+  padding: .3em;
+  margin-bottom: 18%;
+  background-color: #D9D9D9 ;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Jockey One';
+  color: #1F144B;
+}
+
+.buttons-container{
+  margin-top: 2%;
+}
+
+.stats-button {
+  position: absolute;
+  top: 2%;  
+  right: 2%;
+  width: 14vw;
+  height: 8vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: 'Jockey One';
+  transition: transform .4s ease;
+}
+
+.stats-button:hover {
+  transform: scale(1.1); 
+  filter: brightness(70%);
+}
+
+.stat-chart{
+  color: #84BCC8;
+  font-size: 1.4rem
+}
+}
+
+/* Styles for screens(md) */
+@media screen and (min-width: 768px) {
+.containerCategorySelection { 
+  background-color: #84BCC8;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+}
+
+.sycuresLogoGameCategorySelection {
+  position: absolute;
+  width: 40vw;
+  height: auto;
+  top: 3%;
+  right: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.boxCategorySelectionBG {
+  position: relative;
+  background-color: rgb(255, 255, 255, 0.6);
+  width: 100vw;
+  height: 55%;
+  margin-top: 17%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+}
+
+.boxCategorySelection {
+  position: relative;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 50px;
+  width: 90vw;
+  height: 65vh;
+  margin-top: 0%;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+}
+
+.rowCategorySelection {
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1%;
+}
+  
+.backButtonCategorySelection {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  width: 11vw;
+  height: 9vh;
+  background: url('./Photos/BackButtonImage.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: none;
+  transition: transform .4s ease;
+}
+
+.backButtonCategorySelection:hover {
+  transform: scale(1.1); 
+  filter: brightness(70%);
+}
+
+.buttonCategorySelection {
+  position: relative;
+  width: 40vw;
+  height: 18vh;
+  padding: 10px;
+  font-size: 1.8rem;
+  font-family: 'Jockey One';
+  margin: .5rem;
+  margin-top: 1%;
+  color: white;
+  background-color: #1F144B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform .4s ease;
+}
+
+.buttonCategorySelection:hover{
+  transform: scale(1.1); 
+  filter: brightness(70%);
+}
+
+.popupInstruction {
+  position: relative;
+  top: 17%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: auto;
+  padding: .3em;
+  margin-bottom: 11%;
+  background-color: #D9D9D9 ;
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: bold;
+  font-family: 'Jockey One';
+  color: #1F144B;
+}
+
+.buttons-container{
+  margin-top: 2%;
+}
+
+.stats-button {
+  position: absolute;
+  top: 2%;  
+  right: 2%;
+  width: 11vw;
+  height: 9vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: 'Jockey One';
+  transition: transform .4s ease;
+}
+
+.stats-button:hover {
+  transform: scale(1.1); 
+  filter: brightness(70%);
+}
+
+.stat-chart{
+  color: #84BCC8;
+  font-size: 1.4rem
+}
+}
+
+/* Styles for screens(lg) */
+@media screen and (min-width: 1024px) {
+.containerCategorySelection { 
+  background-color: #84BCC8;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+}
+
+.sycuresLogoGameCategorySelection {
+  position: absolute;
+  width: 34vw;
+  height: auto;
+  top: 3%;
+  right: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.boxCategorySelectionBG {
+  position: relative;
+  background-color: rgb(255, 255, 255, 0.6);
+  width: 100vw;
+  height: 55%;
+  margin-top: 17%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+}
+
+.boxCategorySelection {
+  position: relative;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 50px;
+  width: 90vw;
+  height: 65vh;
+  margin-top: 0%;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+}
+
+.rowCategorySelection {
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1%;
+}
+  
+.backButtonCategorySelection {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  width: 10vw;
+  height: 10vh;
+  background: url('./Photos/BackButtonImage.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: none;
+  transition: transform .4s ease;
+}
+
+.backButtonCategorySelection:hover {
+  transform: scale(1.1); 
+  filter: brightness(70%);
+}
+
+.buttonCategorySelection {
+  position: relative;
+  width: 40vw;
+  height: 18vh;
+  padding: 10px;
+  font-size: 2rem;
+  font-family: 'Jockey One';
+  margin: .5rem;
+  margin-top: 1%;
+  color: white;
+  background-color: #1F144B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform .4s ease;
+}
+
+.buttonCategorySelection:hover{
+  transform: scale(1.1); 
+  filter: brightness(70%);
+}
+
+.popupInstruction {
+  position: relative;
+  top: 17%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: auto;
+  padding: .3em;
+  margin-bottom: 7%;
+  background-color: #D9D9D9 ;
+  text-align: center;
+  font-size: 2.1rem;
+  font-weight: bold;
+  font-family: 'Jockey One';
+  color: #1F144B;
+}
+
+.buttons-container{
+  margin-top: 2%;
+}
+
+.stats-button {
+  position: absolute;
+  top: 2%;  
+  right: 2%;
+  width: 10vw;
+  height: 10vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Jockey One';
+  transition: transform .4s ease;
+}
+
+.stats-button:hover {
+  transform: scale(1.1); 
+  filter: brightness(70%);
+}
+
+.stat-chart{
+  color: #84BCC8;
+  font-size: 1.5rem
+}
+}
+
+/* Styles for screens(xl) */
+@media screen and (min-width: 1280px) {
+.containerCategorySelection { 
+  background-color: #84BCC8;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+}
+
+.sycuresLogoGameCategorySelection {
+  position: absolute;
+  width: 30vw;
+  height: auto;
+  top: 3%;
+  right: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.boxCategorySelectionBG {
+  position: relative;
+  background-color: rgb(255, 255, 255, 0.6);
+  width: 100vw;
+  height: 55%;
+  margin-top: 17%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+}
+
+.boxCategorySelection {
+  position: relative;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 50px;
+  width: 90vw;
+  height: 65vh;
+  margin-top: 0%;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+}
+
+.rowCategorySelection {
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1%;
+}
+  
+.backButtonCategorySelection {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  width: 9vw;
+  height: 11vh;
+  background: url('./Photos/BackButtonImage.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: none;
+  transition: transform .4s ease;
+}
+
+.backButtonCategorySelection:hover {
+  transform: scale(1.1); 
+  filter: brightness(70%);
+}
+
+.buttonCategorySelection {
+  position: relative;
+  width: 37.5vw;
+  height: 18vh;
+  padding: 10px;
+  font-size: 2.2rem;
+  font-family: 'Jockey One';
+  margin: .5rem;
+  margin-top: 1%;
+  color: white;
+  background-color: #1F144B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform .4s ease;
+}
+
+.buttonCategorySelection:hover{
+  transform: scale(1.1); 
+  filter: brightness(70%);
+}
+
+.popupInstruction {
+  position: relative;
+  top: 17%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75vw;
+  height: auto;
+  padding: .3em;
+  margin-bottom: 5%;
+  background-color: #D9D9D9 ;
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: bold;
+  font-family: 'Jockey One';
+  color: #1F144B;
+}
+
+.buttons-container{
+  margin-top: 2%;
+}
+
+.stats-button {
+  position: absolute;
+  top: 2%;  
+  right: 2%;
+  width: 9vw;
+  height: 11vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: none;
+  font-size: 1.7rem;
+  font-weight: bold;
+  font-family: 'Jockey One';
+  transition: transform .4s ease;
+}
+
+.stats-button:hover {
+  transform: scale(1.1); 
+  filter: brightness(70%);
+}
+
+.stat-chart{
+  color: #84BCC8;
+  font-size: 1.7rem
+}
+}
+
+@media screen and (min-width: 1536px) {
 .containerCategorySelection {
   background-color: #84BCC8;
   width: 100vw;
@@ -99,17 +824,16 @@
   width: 76%;
   height: auto;
   padding: .3em;
+  margin-bottom: 3%;
   background-color: #D9D9D9 ;
   text-align: center;
-  font-size: 260%;
+  font-size: 2.5rem;
   font-weight: bold;
   font-family: 'Jockey One';
   color: #1F144B;
 }
 
-.buttons-container{
-  margin-top: 2%;
-}
+
 
 .stats-button {
   position: absolute;
@@ -130,4 +854,10 @@
 .stats-button:hover {
   transform: scale(1.1); 
   filter: brightness(70%);
+}
+
+.stat-chart{
+  color: #84BCC8;
+  font-size: 2rem
+}  
 }
