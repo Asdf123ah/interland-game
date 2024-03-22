@@ -260,7 +260,7 @@
     height: 10vh;
     width: 20vw;
     top: 0;
-    margin-left: 0%;
+    margin-left: 10%;
     color: #1F144B  ;
     font-size: .8rem;
     font-family: 'Jockey One';
@@ -496,7 +496,7 @@
 }
 
 .baseHexagon {
-    width: 210px;
+    width: 230px;
     height: 120px;
     position: absolute;
     clip-path: polygon(9% 0%, 91% 0%, 100% 50%, 91% 100%, 9% 100%, 0% 50%);
@@ -509,7 +509,7 @@
 }
 
 .leftHexagon {
-    width: 210px;
+    width: 230px;
     height: 120px;
     position: absolute;
     clip-path: polygon(9% 0%, 91% 0%, 100% 50%, 91% 100%, 9% 100%, 0% 50%);
@@ -521,7 +521,7 @@
 }
 
 .rightHexagon {
-    width: 210px;
+    width: 230px;
     height: 120px;
     position: absolute;
     clip-path: polygon(9% 0%, 91% 0%, 100% 50%, 91% 100%, 9% 100%, 0% 50%);
@@ -694,7 +694,7 @@
     height: 10vh;
     width: 20vw;
     top: 0;
-    margin-left: 0%;
+    margin-left: 15%;
     color: #1F144B  ;
     font-size: 1.3rem;
     font-family: 'Jockey One';
@@ -929,7 +929,7 @@
 }
 
 .baseHexagon {
-    width: 266px;
+    width: 276px;
     height: 140px;
     position: absolute;
     clip-path: polygon(9% 0%, 91% 0%, 100% 50%, 91% 100%, 9% 100%, 0% 50%);
@@ -942,7 +942,7 @@
 }
 
 .leftHexagon {
-    width: 266px;
+    width: 276px;
     height: 140px;
     position: absolute;
     clip-path: polygon(9% 0%, 91% 0%, 100% 50%, 91% 100%, 9% 100%, 0% 50%);
@@ -954,7 +954,7 @@
 }
 
 .rightHexagon {
-    width: 266px;
+    width: 276px;
     height: 140px;
     position: absolute;
     clip-path: polygon(9% 0%, 91% 0%, 100% 50%, 91% 100%, 9% 100%, 0% 50%);
@@ -1127,7 +1127,7 @@
     height: 10vh;
     width: 20vw;
     top: 0;
-    margin-left: -15%;
+    margin-left: 15%;
     color: #1F144B  ;
     font-size: 1.6rem;
     font-family: 'Jockey One';
@@ -1362,7 +1362,7 @@
 }
 
 .baseHexagon {
-    width: 361px;
+    width: 381px;
     height: 160px;
     position: absolute;
     clip-path: polygon(9% 0%, 91% 0%, 100% 50%, 91% 100%, 9% 100%, 0% 50%);
@@ -1375,7 +1375,7 @@
 }
 
 .leftHexagon {
-    width: 361px;
+    width: 381px;
     height: 160px;
     position: absolute;
     clip-path: polygon(9% 0%, 91% 0%, 100% 50%, 91% 100%, 9% 100%, 0% 50%);
@@ -1387,7 +1387,7 @@
 }
 
 .rightHexagon {
-    width: 361px;
+    width: 381px;
     height: 160px;
     position: absolute;
     clip-path: polygon(9% 0%, 91% 0%, 100% 50%, 91% 100%, 9% 100%, 0% 50%);
@@ -1560,7 +1560,7 @@
     height: 10vh;
     width: 20vw;
     top: 0;
-    margin-left: -15%;
+    margin-left: 15%;
     color: #1F144B  ;
     font-size: 1.8rem;
     font-family: 'Jockey One';
@@ -1795,7 +1795,7 @@
 }
 
 .baseHexagon {
-    width: 446px;
+    width: 466px;
     height: 180px;
     position: absolute;
     clip-path: polygon(9% 0%, 91% 0%, 100% 50%, 91% 100%, 9% 100%, 0% 50%);
@@ -1808,7 +1808,7 @@
 }
 
 .leftHexagon {
-    width: 446px;
+    width: 466px;
     height: 180px;
     position: absolute;
     clip-path: polygon(9% 0%, 91% 0%, 100% 50%, 91% 100%, 9% 100%, 0% 50%);
@@ -1820,7 +1820,7 @@
 }
 
 .rightHexagon {
-    width: 446px;
+    width: 466px;
     height: 180px;
     position: absolute;
     clip-path: polygon(9% 0%, 91% 0%, 100% 50%, 91% 100%, 9% 100%, 0% 50%);
@@ -1993,7 +1993,7 @@
     height: 10vh;
     width: 20vw;
     top: 0;
-    margin-left: -15%;
+    margin-left: 20%;
     color: #1F144B  ;
     font-size: 1.9rem;
     font-family: 'Jockey One';
@@ -2425,7 +2425,7 @@
     height: 10vh;
     width: 20vw;
     top: 0;
-    left: 30%;
+    left: 10%;
     color: #1F144B  ;
     font-size: 220%;
     font-family: 'Jockey One';
