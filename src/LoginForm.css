@@ -9,17 +9,17 @@
 }
 
 .upper-box {
-    flex: 10;
+    flex: 15;
     background-color: #D9D9D9;
     position: relative;
+    overflow: hidden;
 }
 
 .lower-box {
-    flex: 90;
+    flex: 85;
     background-color: #84BCC8;
     position: relative;
-    overflow-x: hidden  ;
-    overflow-y: auto;
+    overflow: hidden;
 }
 
 .giant-sycures {
@@ -29,6 +29,7 @@
     width: 120vw;
     height: 98vh;
     z-index: 1; 
+    display: none;
 }
 
 .black-box {
@@ -39,29 +40,34 @@
     right: 18%;
     top: 0;
     z-index: 2;
+    display: none;
 }
 
 .darkblue-box {
     background-color: #1F144B;
-    width: 80vw;
+    width: 90vw;
     height: 60vh;
     position: absolute;
-    right: 10%;
-    top: 0;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 10px;
     font-family: 'Jockey One';
     font-weight: bold;
     color: white;
     z-index: 6;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sycures-logo-login {
     position: absolute;
     height: auto;
-    width: 32vw;
-    top: 5%;
-    right: 33%;
+    width: 60vw;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
     cursor: pointer;
     border: transparent;
     z-index: 4;
@@ -85,6 +91,7 @@
     text-decoration: none;
     background-color: rgba(31, 20, 75, 0.3);
     z-index: 10;
+    display:none ;
     
 }
 
@@ -110,6 +117,7 @@
     text-decoration: none;
     background-color: rgba(31, 20, 75, 0.3);
     z-index: 10;
+    display: none;
 }
 
 .button-help-login:hover{
@@ -134,6 +142,8 @@
     text-decoration: none;
     background-color: rgba(31, 20, 75, 0.3);
     z-index: 10;
+    display: none;
+
 }
 
 .button-contact-login:hover{
@@ -141,58 +151,70 @@
 }
 
 .label-email {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-family: 'Jockey One';
     font-weight: bold;
-    top: 13%;
-    margin-left: 7%;
+    top: 20%;
+    margin-left: 8%;  
+    transform: translateX(-50%);
     width: auto;
+    position: relative;
 }
+
 
 .input-style-email {
     font-size: 1.5rem;
     padding: 8px;
-    width: 64vw;
+    width: 70vw;
     margin-bottom: 15%;
-    margin-left: 7%;
+    margin-top: 0%;
+    margin-left: 50%;
+    transform: translateX(-50%);
     font-family: 'Jockey One';
     font-weight: bold;
     color: #000000;
     background-color: #B6B6B6;
+    position: relative;
+    
 }
 
 .label-password {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-family: 'Jockey One';
     font-weight: bold;
-    margin-top: 20%;
-    margin-left: 7%;
+    top: 50%;
+    margin-top: 0%;
+    margin-left: 9%;
+    transform: translateX(-50%);
     width: auto;
+    position: relative;
 }
 
 .input-style-password {
     font-size: 1.5rem;
     padding: 8px;
-    width: 64vw;
+    width: 70vw;
     margin-bottom: 5%;
-    margin-left: 7%;
+    margin-top: 1%;
+    margin-left: 50%;
+    transform: translateX(-50%);
     font-family: 'Jockey One';
     font-weight: bold;
     color: #000000;
     background-color: #B6B6B6;
+    position: relative;
 }
 
 .forgot-password{
-    margin-left: 58%;
-    margin-bottom: 11%;
-    font-size: .8rem;
+    margin-left: 53%;
+    margin-bottom: 8%;
+    font-size: 1rem;
     font-family: 'Jockey One';
 }
 
 .p-login{
-    margin-top: 0%;
-    margin-left: 23%;
-    font-size: .8rem;
+    margin-left: 15%;
+    font-size: 1rem;
     font-family: 'Jockey One';
 }
 
@@ -203,10 +225,10 @@
 
 .label-name {
     position: absolute;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-family: 'Jockey One';
     font-weight: bold;
-    top: 17%;
+    top: 19%;
     margin-left: 7%;
     width: auto;
 }
@@ -214,8 +236,8 @@
 .input-style-name {
     font-size: 1.3rem;
     padding: 8px;
-    width: 64vw;
-    margin-top: -3%;
+    width: 70vw;
+    margin-top: 0%;
     margin-left: 7%;
     margin-bottom: 5%;
     font-family: 'Jockey One';
@@ -225,7 +247,7 @@
 }
 
 .label-age {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-family: 'Jockey One';
     font-weight: bold;
     margin-top: 13%;
@@ -236,7 +258,7 @@
 .input-style-age {
     font-size: 1.3rem;
     padding: 8px;
-    width: 64vw;
+    width: 70vw;
     margin-bottom: 5%;
     margin-left: 7%;
     font-family: 'Jockey One';
@@ -246,7 +268,7 @@
 }
 
 .label-regEmail {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-family: 'Jockey One';
     font-weight: bold;
     margin-top: 13%;
@@ -257,7 +279,7 @@
 .input-style-regEmail {
     font-size: 1.3rem;
     padding: 8px;
-    width: 64vw;
+    width: 70vw;
     margin-bottom: 5%;
     margin-left: 7%;
     font-family: 'Jockey One';
@@ -267,7 +289,7 @@
 }
 
 .label-regPass {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-family: 'Jockey One';
     font-weight: bold;
     margin-top: 13%;
@@ -278,7 +300,7 @@
 .input-style-regPass {
     font-size: 1.3rem;
     padding: 8px;
-    width: 64vw;
+    width: 70vw;
     margin-bottom: 0%;
     margin-left: 7%;
     font-family: 'Jockey One';
@@ -289,15 +311,15 @@
 
 .start-button-style-login {
     position: absolute;
-    top: 110%;
+    top: 105%;
     left: 20%;
     width: 50vw;
-    height: 7vh;
+    height: 6vh;
     font-size: 2rem;
     font-weight: bold;
     font-family: 'Jockey One';
     text-align: center;
-    border-radius: 50px;
+    border-radius: 20px;
     color: #1F144B;
     cursor: pointer;
     z-index: 1000;
@@ -316,6 +338,7 @@
     bottom: -47%;
     left: 14%;
     z-index: 6;
+    display: none;
 }
 
 .blinking-eye-left {
@@ -329,6 +352,7 @@
     animation: blinklogin 3s infinite alternate;
     border: 1px solid #FFFFFF;
     z-index: 11;
+    display: none;
 }
 
 .blinking-eye-right {
@@ -342,6 +366,7 @@
     animation: blinklogin 3s infinite alternate;
     border: 1px solid #FFFFFF;
     z-index: 11;
+    display: none;
 }
 
 .robot-login-rightarm {
@@ -352,6 +377,7 @@
     position: absolute;
     z-index: 8;
     animation: moveUpDown 1s infinite;
+    display: none;
 }
 
 .robot-login-leftarm {
@@ -362,6 +388,8 @@
     position: absolute;
     transform: scaleX(-1);
     z-index: 8;
+    display: none;
+
 }
 
 .login-register-container {
@@ -488,17 +516,17 @@
 }
 
 .upper-box {
-    flex: 10;
+    flex: 15;
     background-color: #D9D9D9;
     position: relative;
+    overflow: hidden;
 }
 
 .lower-box {
-    flex: 90;
+    flex: 85;
     background-color: #84BCC8;
     position: relative;
-    overflow-x: hidden  ;
-    overflow-y: auto;
+    overflow: hidden;
 }
 
 .giant-sycures {
@@ -508,6 +536,7 @@
     width: 120vw;
     height: 98vh;
     z-index: 1; 
+    display: none;
 }
 
 .black-box {
@@ -518,29 +547,33 @@
     right: 18%;
     top: 0;
     z-index: 2;
+    display: none;
 }
 
 .darkblue-box {
     background-color: #1F144B;
-    width: 80vw;
+    width: 90vw;
     height: 60vh;
     position: absolute;
-    right: 10%;
-    top: 0;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 10px;
     font-family: 'Jockey One';
     font-weight: bold;
     color: white;
     z-index: 6;
-
+    justify-content: center;
+    align-items: center;
 }
 
 .sycures-logo-login {
     position: absolute;
     height: auto;
-    width: 32vw;
-    top: 5%;
-    right: 33%;
+    width: 43vw;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
     cursor: pointer;
     border: transparent;
     z-index: 4;
@@ -564,7 +597,7 @@
     text-decoration: none;
     background-color: rgba(31, 20, 75, 0.3);
     z-index: 10;
-    
+    display: none;
 }
 
 .button-about-login:hover{
@@ -589,6 +622,7 @@
     text-decoration: none;
     background-color: rgba(31, 20, 75, 0.3);
     z-index: 10;
+    display: none;
 }
 
 .button-help-login:hover{
@@ -613,6 +647,7 @@
     text-decoration: none;
     background-color: rgba(31, 20, 75, 0.3);
     z-index: 10;
+    display: none;
 }
 
 .button-contact-login:hover{
@@ -624,16 +659,16 @@
     font-family: 'Jockey One';
     font-weight: bold;
     top: 11%;
-    margin-left: 7%;
+    margin-left: 9%;
     width: auto;
 }
 
 .input-style-email {
     font-size: 1.8rem;
     padding: 8px;
-    width: 64vw;
+    width: 70vw;
     margin-bottom: 15%;
-    margin-left: 7%;
+    margin-left: 9%;
     font-family: 'Jockey One';
     font-weight: bold;
     color: #000000;
@@ -645,16 +680,16 @@
     font-family: 'Jockey One';
     font-weight: bold;
     margin-top: 20%;
-    margin-left: 7%;
+    margin-left: 9%;
     width: auto;
 }
 
 .input-style-password {
     font-size: 1.8rem;
     padding: 8px;
-    width: 64vw;
-    margin-bottom: 5%;
-    margin-left: 7%;
+    width: 70vw;
+    margin-bottom: 3%;
+    margin-left: 9%;
     font-family: 'Jockey One';
     font-weight: bold;
     color: #000000;
@@ -662,8 +697,8 @@
 }
 
 .forgot-password{
-    margin-left: 58%;
-    margin-bottom: 11%;
+    margin-left: 62%;
+    margin-bottom: 6%;
     font-size: 1.3rem;
     font-family: 'Jockey One';
 }
@@ -682,21 +717,21 @@
 
 .label-name {
     position: absolute;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-family: 'Jockey One';
     font-weight: bold;
     top: 17%;
-    margin-left: 7%;
+    margin-left: 9%;
     width: auto;
 }
 
 .input-style-name {
     font-size: 1.8rem;
     padding: 8px;
-    width: 64vw;
-    margin-top: -1%;
-    margin-left: 7%;
-    margin-bottom: 5%;
+    width: 70vw;
+    margin-top: -3%;
+    margin-left: 9%;
+    margin-bottom: 4%;
     font-family: 'Jockey One';
     font-weight: bold;
     color: #000000;
@@ -704,20 +739,20 @@
 }
 
 .label-age {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-family: 'Jockey One';
     font-weight: bold;
     margin-top: 13%;
-    margin-left: 7%;
+    margin-left: 9%;
     width: auto;
 }
 
 .input-style-age {
     font-size: 1.8rem;
     padding: 8px;
-    width: 64vw;
-    margin-bottom: 5%;
-    margin-left: 7%;
+    width: 70vw;
+    margin-bottom: 4%;
+    margin-left: 9%;
     font-family: 'Jockey One';
     font-weight: bold;
     color: #000000;
@@ -725,20 +760,20 @@
 }
 
 .label-regEmail {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-family: 'Jockey One';
     font-weight: bold;
     margin-top: 13%;
-    margin-left: 7%;
+    margin-left: 9%;
     width: auto;
 }
 
 .input-style-regEmail {
     font-size: 1.8rem;
     padding: 8px;
-    width: 64vw;
-    margin-bottom: 5%;
-    margin-left: 7%;
+    width: 70vw;
+    margin-bottom: 4%;
+    margin-left: 9%;
     font-family: 'Jockey One';
     font-weight: bold;
     color: #000000;
@@ -746,20 +781,20 @@
 }
 
 .label-regPass {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-family: 'Jockey One';
     font-weight: bold;
     margin-top: 13%;
-    margin-left: 7%;
+    margin-left: 9%;
     width: auto;
 }
 
 .input-style-regPass {
     font-size: 1.8rem;
     padding: 8px;
-    width: 64vw;
+    width: 70vw;
     margin-bottom: 0%;
-    margin-left: 7%;
+    margin-left: 9%;
     font-family: 'Jockey One';
     font-weight: bold;
     color: #000000;
@@ -776,7 +811,7 @@
     font-weight: bold;
     font-family: 'Jockey One';
     text-align: center;
-    border-radius: 50px;
+    border-radius: 30px;
     color: #1F144B;
     cursor: pointer;
     z-index: 1000;
@@ -795,6 +830,8 @@
     bottom: -60%;
     left: 18%;
     z-index: 6;
+    display: none;
+
 }
 
 .blinking-eye-left {
@@ -808,6 +845,7 @@
     animation: blinklogin 3s infinite alternate;
     border: 1px solid #FFFFFF;
     z-index: 11;
+    display: none;
 }
 
 .blinking-eye-right {
@@ -821,6 +859,7 @@
     animation: blinklogin 3s infinite alternate;
     border: 1px solid #FFFFFF;
     z-index: 11;
+    display: none;
 }
 
 .robot-login-rightarm {
@@ -831,6 +870,7 @@
     position: absolute;
     z-index: 8;
     animation: moveUpDown 1s infinite;
+    display: none;
 }
 
 .robot-login-leftarm {
@@ -841,6 +881,7 @@
     position: absolute;
     transform: scaleX(-1);
     z-index: 8;
+    display: none;
 }
 
 .login-register-container {
@@ -967,17 +1008,17 @@
 }
 
 .upper-box {
-    flex: 10;
+    flex: 15;
     background-color: #D9D9D9;
     position: relative;
+    overflow: hidden;
 }
 
 .lower-box {
-    flex: 90;
+    flex: 85;
     background-color: #84BCC8;
     position: relative;
-    overflow-x: hidden  ;
-    overflow-y: auto;
+    overflow: hidden;
 }
 
 .giant-sycures {
@@ -987,6 +1028,7 @@
     width: 120vw;
     height: 98vh;
     z-index: 1; 
+    display: none;
 }
 
 .black-box {
@@ -997,29 +1039,33 @@
     right: 18%;
     top: 0;
     z-index: 2;
+    display: none;
 }
 
 .darkblue-box {
     background-color: #1F144B;
-    width: 80vw;
-    height: 60vh;
+    width: 90vw;
+    height: 65vh;
     position: absolute;
-    right: 10%;
-    top: 0;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 10px;
     font-family: 'Jockey One';
     font-weight: bold;
     color: white;
     z-index: 6;
-
+    justify-content: center;
+    align-items: center;
 }
 
 .sycures-logo-login {
     position: absolute;
     height: auto;
-    width: 26vw;
-    top: 5%;
-    right: 36%;
+    width: 35vw;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
     cursor: pointer;
     border: transparent;
     z-index: 4;
@@ -1043,7 +1089,7 @@
     text-decoration: none;
     background-color: rgba(31, 20, 75, 0.3);
     z-index: 10;
-    
+    display:none ;
 }
 
 .button-about-login:hover{
@@ -1068,6 +1114,7 @@
     text-decoration: none;
     background-color: rgba(31, 20, 75, 0.3);
     z-index: 10;
+    display:none ;
 }
 
 .button-help-login:hover{
@@ -1092,6 +1139,7 @@
     text-decoration: none;
     background-color: rgba(31, 20, 75, 0.3);
     z-index: 10;
+    display:none ;
 }
 
 .button-contact-login:hover{
@@ -1103,16 +1151,16 @@
     font-family: 'Jockey One';
     font-weight: bold;
     top: 11%;
-    margin-left: 7%;
+    margin-left: 9%;
     width: auto;
 }
 
 .input-style-email {
-    font-size: 1.9rem;
+    font-size: 2rem;
     padding: 8px;
-    width: 64vw;
+    width: 70vw;
     margin-bottom: 11%;
-    margin-left: 7%;
+    margin-left: 9%;
     font-family: 'Jockey One';
     font-weight: bold;
     color: #000000;
@@ -1120,20 +1168,20 @@
 }
 
 .label-password {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     font-family: 'Jockey One';
     font-weight: bold;
     margin-top: 20%;
-    margin-left: 7%;
+    margin-left: 9%;
     width: auto;
 }
 
 .input-style-password {
-    font-size: 1.8rem;
+    font-size: 2rem;
     padding: 8px;
-    width: 64vw;
-    margin-bottom: 5%;
-    margin-left: 7%;
+    width: 70vw;
+    margin-bottom: 3%;
+    margin-left: 9%;
     font-family: 'Jockey One';
     font-weight: bold;
     color: #000000;
@@ -1141,7 +1189,7 @@
 }
 
 .forgot-password{
-    margin-left: 60%;
+    margin-left: 65%;
     margin-bottom: 7%;
     font-size: 1.4rem;
     font-family: 'Jockey One';
@@ -1149,7 +1197,7 @@
 
 .p-login{
     margin-top: 0%;
-    margin-left: 23%;
+    margin-left: 25%;
     font-size: 1.4rem;
     font-family: 'Jockey One';
 }
@@ -1165,16 +1213,16 @@
     font-family: 'Jockey One';
     font-weight: bold;
     top: 17%;
-    margin-left: 7%;
+    margin-left: 9%;
     width: auto;
 }
 
 .input-style-name {
-    font-size: 1.9rem;
+    font-size: 2rem;
     padding: 8px;
-    width: 64vw;
-    margin-top: -1%;
-    margin-left: 7%;
+    width: 70vw;
+    margin-top: 0%;
+    margin-left: 9%;
     margin-bottom: 4%;
     font-family: 'Jockey One';
     font-weight: bold;
@@ -1187,16 +1235,16 @@
     font-family: 'Jockey One';
     font-weight: bold;
     margin-top: 13%;
-    margin-left: 7%;
+    margin-left: 9%;
     width: auto;
 }
 
 .input-style-age {
-    font-size: 1.9rem;
+    font-size: 2rem;
     padding: 8px;
-    width: 64vw;
+    width: 70vw;
     margin-bottom: 4%;
-    margin-left: 7%;
+    margin-left: 9%;
     font-family: 'Jockey One';
     font-weight: bold;
     color: #000000;
@@ -1208,16 +1256,16 @@
     font-family: 'Jockey One';
     font-weight: bold;
     margin-top: 13%;
-    margin-left: 7%;
+    margin-left: 9%;
     width: auto;
 }
 
 .input-style-regEmail {
-    font-size: 1.9rem;
+    font-size: 2rem;
     padding: 8px;
-    width: 64vw;
+    width: 70vw;
     margin-bottom: 4%;
-    margin-left: 7%;
+    margin-left: 9%;
     font-family: 'Jockey One';
     font-weight: bold;
     color: #000000;
@@ -1225,20 +1273,20 @@
 }
 
 .label-regPass {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     font-family: 'Jockey One';
     font-weight: bold;
     margin-top: 13%;
-    margin-left: 7%;
+    margin-left: 9%;
     width: auto;
 }
 
 .input-style-regPass {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     padding: 8px;
-    width: 64vw;
+    width: 70vw;
     margin-bottom: 0%;
-    margin-left: 7%;
+    margin-left: 9%;
     font-family: 'Jockey One';
     font-weight: bold;
     color: #000000;
@@ -1247,15 +1295,15 @@
 
 .start-button-style-login {
     position: absolute;
-    top: 118%;
-    left: 19%;
+    top: 105%;
+    left: 20%;
     width: 50vw;
-    height: 7vh;
+    height: 8vh;
     font-size: 2rem;
     font-weight: bold;
     font-family: 'Jockey One';
     text-align: center;
-    border-radius: 50px;
+    border-radius: 30px;
     color: #1F144B;
     cursor: pointer;
     z-index: 1000;
@@ -1274,6 +1322,7 @@
     bottom: -73%;
     left: 18%;
     z-index: 6;
+    display: none;
 }
 
 .blinking-eye-left {
@@ -1287,6 +1336,7 @@
     animation: blinklogin 3s infinite alternate;
     border: 1px solid #FFFFFF;
     z-index: 11;
+    display: none;
 }
 
 .blinking-eye-right {
@@ -1300,6 +1350,7 @@
     animation: blinklogin 3s infinite alternate;
     border: 1px solid #FFFFFF;
     z-index: 11;
+    display: none;
 }
 
 .robot-login-rightarm {
@@ -1310,6 +1361,7 @@
     position: absolute;
     z-index: 8;
     animation: moveUpDown 1s infinite;
+    display: none;
 }
 
 .robot-login-leftarm {
@@ -1320,6 +1372,7 @@
     position: absolute;
     transform: scaleX(-1);
     z-index: 8;
+    display: none;
 }
 
 .login-register-container {
@@ -1446,17 +1499,17 @@
 }
 
 .upper-box {
-    flex: 10;
+    flex: 15;
     background-color: #D9D9D9;
     position: relative;
+    overflow: hidden;
 }
 
 .lower-box {
-    flex: 90;
+    flex: 85;
     background-color: #84BCC8;
     position: relative;
-    overflow-x: hidden  ;
-    overflow-y: auto;
+    overflow: hidden;
 }
 
 .giant-sycures {
@@ -1466,6 +1519,7 @@
     width: 120vw;
     height: 98vh;
     z-index: 1; 
+    display: none;
 }
 
 .black-box {
@@ -1476,6 +1530,7 @@
     right: 18%;
     top: 0;
     z-index: 2;
+    display: none;
 }
 
 .darkblue-box {
@@ -1483,22 +1538,26 @@
     width: 80vw;
     height: 60vh;
     position: absolute;
-    right: 10%;
-    top: 0;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 10px;
     font-family: 'Jockey One';
     font-weight: bold;
     color: white;
     z-index: 6;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sycures-logo-login {
     position: absolute;
     height: auto;
-    width: 20vw;
-    top: 5%;
-    right: 40%; 
+    width: 26vw;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
     cursor: pointer;
     border: transparent;
     z-index: 4;
@@ -1522,7 +1581,7 @@
     text-decoration: none;
     background-color: rgba(31, 20, 75, 0.3);
     z-index: 10;
-    
+    display:none ;
 }
 
 .button-about-login:hover{
@@ -1547,6 +1606,7 @@
     text-decoration: none;
     background-color: rgba(31, 20, 75, 0.3);
     z-index: 10;
+    display:none ;
 }
 
 .button-help-login:hover{
@@ -1571,6 +1631,7 @@
     text-decoration: none;
     background-color: rgba(31, 20, 75, 0.3);
     z-index: 10;
+    display:none ;
 }
 
 .button-contact-login:hover{
@@ -1582,16 +1643,16 @@
     font-family: 'Jockey One';
     font-weight: bold;
     top: 11%;
-    margin-left: 9%;
+    margin-left: 5%;
     width: auto;
 }
 
 .input-style-email {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     padding: 8px;
-    width: 64vw;
+    width: 70vw;
     margin-bottom: 5%;
-    margin-left: 9%;
+    margin-left: 5%;
     font-family: 'Jockey One';
     font-weight: bold;
     color: #000000;
@@ -1603,16 +1664,16 @@
     font-family: 'Jockey One';
     font-weight: bold;
     margin-top: 20%;
-    margin-left: 9%;
+    margin-left: 5%;
     width: auto;
 }
 
 .input-style-password {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     padding: 8px;
-    width: 64vw;
-    margin-bottom: 3%;
-    margin-left: 9%;
+    width: 70vw;
+    margin-bottom: 0%;
+    margin-left: 5%;
     font-family: 'Jockey One';
     font-weight: bold;
     color: #000000;
@@ -1620,8 +1681,8 @@
 }
 
 .forgot-password{
-    margin-left: 62%;
-    margin-bottom: 4%;
+    margin-left: 67%;
+    margin-bottom: 6%;
     font-size: 1.8rem;
     font-family: 'Jockey One';
 }
@@ -1644,16 +1705,16 @@
     font-family: 'Jockey One';
     font-weight: bold;
     top: 14%;
-    margin-left: 9%;
+    margin-left: 7%;
     width: auto;
 }
 
 .input-style-name {
     font-size: 2rem;
     padding: 8px;
-    width: 64vw;
-    margin-top: -6%;
-    margin-left: 9%;
+    width: 67vw;
+    margin-top: 0%;
+    margin-left: 7%;
     margin-bottom: 2%;
     font-family: 'Jockey One';
     font-weight: bold;
@@ -1666,16 +1727,16 @@
     font-family: 'Jockey One';
     font-weight: bold;
     margin-top: 13%;
-    margin-left: 9%;
+    margin-left: 7%;
     width: auto;
 }
 
 .input-style-age {
     font-size: 2rem;
     padding: 8px;
-    width: 64vw;
+    width: 67vw;
     margin-bottom: 2%;
-    margin-left: 9%;
+    margin-left: 7%;
     font-family: 'Jockey One';
     font-weight: bold;
     color: #000000;
@@ -1687,16 +1748,16 @@
     font-family: 'Jockey One';
     font-weight: bold;
     margin-top: 13%;
-    margin-left: 9%;
+    margin-left: 7%;
     width: auto;
 }
 
 .input-style-regEmail {
     font-size: 2rem;
     padding: 8px;
-    width: 64vw;
+    width: 67vw;
     margin-bottom: 2%;
-    margin-left: 9%;
+    margin-left: 7%;
     font-family: 'Jockey One';
     font-weight: bold;
     color: #000000;
@@ -1708,16 +1769,16 @@
     font-family: 'Jockey One';
     font-weight: bold;
     margin-top: 13%;
-    margin-left: 9%;
+    margin-left: 7%;
     width: auto;
 }
 
 .input-style-regPass {
     font-size: 2rem;
     padding: 8px;
-    width: 64vw;
+    width: 67vw;
     margin-bottom: 0%;
-    margin-left: 9%;
+    margin-left: 7%;
     font-family: 'Jockey One';
     font-weight: bold;
     color: #000000;
@@ -1726,9 +1787,9 @@
 
 .start-button-style-login {
     position: absolute;
-    top: 118%;
-    left: 19%;
-    width: 50vw;
+    top: 107%;
+    left: 25%;
+    width: 40vw;
     height: 10vh;
     font-size: 2.3rem;
     font-weight: bold;
@@ -1753,6 +1814,7 @@
     bottom: -96%;
     left: 16%;
     z-index: 6;
+    display: none;
 }
 
 .blinking-eye-left {
@@ -1766,6 +1828,7 @@
     animation: blinklogin 3s infinite alternate;
     border: 1px solid #FFFFFF;
     z-index: 11;
+    display: none;
 }
 
 .blinking-eye-right {
@@ -1779,6 +1842,7 @@
     animation: blinklogin 3s infinite alternate;
     border: 1px solid #FFFFFF;
     z-index: 11;
+    display: none;
 }
 
 .robot-login-rightarm {
@@ -1789,6 +1853,7 @@
     position: absolute;
     z-index: 8;
     animation: moveUpDown 1s infinite;
+    display: none;
 }
 
 .robot-login-leftarm {
@@ -1799,6 +1864,7 @@
     position: absolute;
     transform: scaleX(-1);
     z-index: 8;
+    display: none;
 }
 
 .login-register-container {
@@ -1928,6 +1994,7 @@
     flex: 15;
     background-color: #D9D9D9;
     position: relative;
+    overflow: hidden;
 }
 
 .lower-box {
@@ -1944,6 +2011,7 @@
     width: 80%;
     height: auto;
     z-index: 1;
+    display: block;
 }
 
 .black-box {
@@ -1954,6 +2022,7 @@
     right: 5%;
     top: 0;
     z-index: 2;
+    display: block;
 }
 
 .darkblue-box {
@@ -1961,8 +2030,9 @@
     width: 51%;
     height: 74%;
     position: absolute;
-    right: 2%;
-    top: 0;
+    top: 37%;
+    left: 72%;
+    transform: translate(-50%, -50%);
     z-index: 3;
     border-radius: 10px;
     font-family: 'Jockey One';
@@ -2000,6 +2070,7 @@
     text-decoration: none;
     background-color: rgba(31, 20, 75, 0.3);
     z-index: 5;
+    display: block;
 }
 
 .button-about-login:hover{
@@ -2023,6 +2094,7 @@
     text-decoration: none;
     background-color: rgba(31, 20, 75, 0.3);
     z-index: 5;
+    display: block;
 }
 
 .button-help-login:hover{
@@ -2046,6 +2118,7 @@
     text-decoration: none;
     background-color: rgba(31, 20, 75, 0.3);
     z-index: 5;
+    display: block;
 }
 
 .button-contact-login:hover{
@@ -2053,7 +2126,7 @@
 }
 
 .label-email {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     font-family: 'Jockey One';
     font-weight: bold;
     margin-top: 10%;
@@ -2062,7 +2135,7 @@
 }
 
 .input-style-email {
-    font-size: 2.8rem;
+    font-size: 2.7rem;
     padding: 8px;
     width: 77%;
     margin-bottom: 6%;
@@ -2075,7 +2148,7 @@
 
 .label-password {
     left: 50%;
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     font-family: 'Jockey One';
     font-weight: bold;
     margin-top: 20%;
@@ -2084,7 +2157,7 @@
 }
 
 .input-style-password {
-    font-size: 2.8rem;
+    font-size: 2.7rem;
     padding: 8px;
     width: 77%;
     margin-bottom: 1%;
@@ -2097,15 +2170,15 @@
 
 .forgot-password{
     margin-top: 1%;
-    margin-left: 50%;
-    font-size: 2rem;
+    margin-left: 58%;
+    font-size: 1.7rem;
     font-family: 'Jockey One';
 }
 
 .p-login{
     margin-top: 4%;
-    margin-left: 15%;
-    font-size: 2rem;
+    margin-left: 20%;
+    font-size: 1.7rem;
     font-family: 'Jockey One';
 }
 
@@ -2115,18 +2188,18 @@
 }
 
 .label-name {
-    position: absolute;
-    font-size: 2.5rem;
+    position: relative;
+    font-size: 2.3rem;
     font-family: 'Jockey One';
     font-weight: bold;
-    top: 15%;
+    margin-top: -10%;
     margin-bottom: 0%;
     margin-left: 10%;
     width: auto;
 }
 
 .input-style-name {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     padding: 8px;   
     width: 77%;
     margin-top: 0%;
@@ -2139,7 +2212,7 @@
 }
 
 .label-age {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     font-family: 'Jockey One';
     font-weight: bold;
     margin-top: 13%;
@@ -2148,7 +2221,7 @@
 }
 
 .input-style-age {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     padding: 8px;
     width: 77%;
     margin-bottom: 0%;
@@ -2160,7 +2233,7 @@
 }
 
 .label-regEmail {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     font-family: 'Jockey One';
     font-weight: bold;
     margin-top: 13%;
@@ -2169,7 +2242,7 @@
 }
 
 .input-style-regEmail {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     padding: 8px;
     width: 77%;
     margin-bottom: 0%;
@@ -2181,7 +2254,7 @@
 }
 
 .label-regPass {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     font-family: 'Jockey One';
     font-weight: bold;
     margin-top: 13%;
@@ -2190,7 +2263,7 @@
 }
 
 .input-style-regPass {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     padding: 8px;
     width: 77%;
     margin-bottom: 0%;
@@ -2231,6 +2304,7 @@
     top: 75%;
     left: -80%;
     z-index: 6;
+    display: block;
 }
 
 .blinking-eye-left {
@@ -2244,6 +2318,7 @@
     animation: blinklogin 3s infinite alternate;
     border: 1px solid #FFFFFF;
     z-index: 6;
+    display: block;
 }
 
 .blinking-eye-right {
@@ -2257,6 +2332,7 @@
     animation: blinklogin 3s infinite alternate;
     border: 1px solid #FFFFFF;
     z-index: 6;
+    display: block;
 }   
 
 .robot-login-rightarm {
@@ -2267,6 +2343,7 @@
     position: absolute;
     z-index: 8;
     animation: moveUpDown 1s infinite;
+    display: block;
 }
 
 .robot-login-leftarm {
@@ -2277,12 +2354,12 @@
     position: absolute;
     transform: scaleX(-1);
     z-index: 8;
+    display: block;
 }
 
 .login-register-container {
     display: flex;
     justify-content: space-evenly;
-    align-items: center; 
     }
     
 .login-register-button{
@@ -2293,17 +2370,18 @@
     font-weight: 700;
     background-color: #D9D9D9;
     color: #FFFFFF;
-    margin-top: 2%;
+    margin-top: 0%;
     padding: 0;
-    margin-bottom: 6%;
+    margin-bottom: 10%;
     cursor: pointer;
     transition: filter .4s ease;
 }
 
 .form-container{
+    margin-top: -10%;
     height: auto;
     transition: filter .4s ease;
-
+    display: block;
 }
 
 .active {
@@ -2394,7 +2472,7 @@
 /* Styles for screens(2xl) */
 @media screen and (min-width: 1536px) {
 .containerLogin {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -2405,6 +2483,7 @@
     flex: 15;
     background-color: #D9D9D9;
     position: relative;
+    overflow: hidden;
 }
 
 .lower-box {
@@ -2436,10 +2515,11 @@
 .darkblue-box {
     background-color: #1F144B;
     width: 51%;
-    height: 74%;
-    position: absolute;
-    right: 2%;
-    top: 0;
+    height: 85%;
+    position: relative;
+    top: 37%;
+    left: 73%;
+    transform: translate(-50%, -50%);
     z-index: 3;
     border-radius: 10px;
     font-family: 'Jockey One';
@@ -2452,9 +2532,10 @@
 .sycures-logo-login {
     position: absolute;
     height: auto;
-    width: 17vw;
+    width: 19vw;
     top: 1%;
-    right: 42.25%;
+    left: 50%;
+    transform: translateX(-50%);
     cursor: pointer;
     border: transparent;
     z-index: 4;
@@ -2535,29 +2616,35 @@
     font-weight: bold;
     margin-top: 10%;
     margin-left: 10%;
+    transform: translate(-50%, -50%);
     width: auto;
+    height: auto;
+    position: relative;
 }
 
 .input-style-email {
     font-size: 3rem;
     padding: 8px;
     width: 77%;
-    margin-bottom: 6%;
-    margin-left: 10%;
+    margin-top: 0%;
+    margin-left: 50%;
+    transform: translateX(-50%);
     font-family: 'Jockey One';
     font-weight: bold;
     color: #000000;
     background-color: #B6B6B6;
+    position: relative;
 }
 
 .label-password {
-    left: 50%;
     font-size: 3rem;
     font-family: 'Jockey One';
     font-weight: bold;
     margin-top: 20%;
-    margin-left: 10%;
-    width: auto;
+    margin-left: -40%;
+    transform: translateX(-50%);
+    position: relative;
+    
 }
 
 .input-style-password {
@@ -2565,11 +2652,13 @@
     padding: 8px;
     width: 77%;
     margin-bottom: 1%;
-    margin-left: 10%;
+    margin-left: 50%;
+    transform: translateX(-50%);
     font-family: 'Jockey One';
     font-weight: bold;
     color: #000000;
-    background-color: #B6B6B6;
+    background-color: #B6B6B6;  
+    position: relative;
 }
 
 .forgot-password{
@@ -2577,6 +2666,7 @@
     margin-left: 63%;
     font-size: 2rem;
     font-family: 'Jockey One';
+    position: relative;
 }
 
 .p-login{
@@ -2584,30 +2674,33 @@
     margin-left: 27%;
     font-size: 2rem;
     font-family: 'Jockey One';
+    position: relative;
 }
 
 .b-register{
     cursor: pointer;
     font-family: 'Jockey One';
+    position: relative;
 }
 
 .label-name {
-    top: -17%;
-    left: 0%;
     font-size: 3rem;
     font-family: 'Jockey One';
     font-weight: bold;
-    margin-top: 20%;
-    margin-left: 11%;
-    width: auto;
+    top: 18%;
+    margin-left: 12%;
+    transform: translate(-50%, -50%);
+    position: absolute;
 }
 
 .input-style-name {
     font-size: 3rem;
     padding: 8px;
     width: 91%;
-    margin-bottom: 1%;
-    margin-left: 0%;
+    margin-top: 6%;
+    margin-bottom: 0%;
+    margin-left: 50%;
+    transform: translateX(-50%);
     font-family: 'Jockey One';
     font-weight: bold;
     color: #000000;
@@ -2620,7 +2713,8 @@
     font-family: 'Jockey One';
     font-weight: bold;
     margin-top: 20%;
-    margin-left: 0%;
+    margin-left: 3%;
+    transform: translateX(-50%);
     width: auto;
 }
 
@@ -2629,7 +2723,8 @@
     padding: 8px;
     width: 91%;
     margin-bottom: 0%;
-    margin-left: 0%;
+    margin-left: 50%;
+    transform: translateX(-50%);
     font-family: 'Jockey One';
     font-weight: bold;
     color: #000000;
@@ -2642,7 +2737,8 @@
     font-family: 'Jockey One';
     font-weight: bold;
     margin-top: 20%;
-    margin-left: 0%;
+    margin-left: 3%;
+    transform: translateX(-50%);
     width: auto;
 }
 
@@ -2651,7 +2747,8 @@
     padding: 8px;
     width: 91%;
     margin-bottom: 0%;
-    margin-left: 0%;
+    margin-left: 50%;
+    transform: translateX(-50%);
     font-family: 'Jockey One';
     font-weight: bold;
     color: #000000;
@@ -2664,7 +2761,8 @@
     font-family: 'Jockey One';
     font-weight: bold;
     margin-top: 20%;
-    margin-left: 0%;
+    margin-left: 3%;
+    transform: translateX(-50%);
     width: auto;
 }
 
@@ -2673,7 +2771,8 @@
     padding: 8px;
     width: 91%;
     margin-bottom: 1%;
-    margin-left: 0%;
+    margin-left: 50%;
+    transform: translateX(-50%);
     font-family: 'Jockey One';
     font-weight: bold;
     color: #000000;
@@ -2682,15 +2781,15 @@
 
 .start-button-style-login {
     position: absolute;
-    top: 110%;
+    top: 118%;
     left: 25%;
     width: 55%;
-    height: 15%;
+    height: 17%;
     font-size: 3.5rem;
     font-weight: bold;
     font-family: 'Jockey One';
     text-align: center;
-    border-radius: 50px;
+    border-radius: 30px;
     color: #1F144B;
     cursor: pointer;
     z-index: 1000;
@@ -2749,7 +2848,7 @@
 }
 
 .robot-login-leftarm {
-    top:73%;
+    top: 73%;
     left: -76%;
     width: auto;
     height: auto;
@@ -2760,29 +2859,36 @@
 
 .login-register-container {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: center;
     align-items: center; 
-    }
-    
-.login-register-button{
-    width: 35%;
+    position: relative;
+    margin-bottom: 3%;
+}
+
+.login-register-button {
+    width: 50%; 
+    max-width: 350px;
     height: auto;
     font-size: 3.2rem;
     font-family: 'Jockey One';
     font-weight: 700;
     background-color: #D9D9D9;
     color: #FFFFFF;
-    margin-top: 2%;
     padding: 0;
-    margin-bottom: 2%;
+    margin: 5%;
     cursor: pointer;
     transition: filter .4s ease;
+    position: relative;
+    margin-bottom: 0%;
 }
 
+
 .form-container{
+    margin-top: 0%;
+    width: auto;
     height: auto;
     transition: filter .4s ease;
-
 }
 
 .active {
@@ -2801,7 +2907,7 @@
     animation: fadeOut 4s forwards;
 }
     
-    .modal-content {
+.modal-content {
     background-color: green;
     color: #FFFFFF;
     font-weight: bold;
@@ -2810,9 +2916,9 @@
     border: 1px solid #888;
     border-radius: 5px;
     width: 55%;
-    }
+}
 
-    .modal-content-already-use {
+.modal-content-already-use {
     background-color: red;
     color: #FFFFFF;
     font-weight: bold;
@@ -2821,9 +2927,9 @@
     border: 1px solid #888;
     border-radius: 5px;
     width: 55%;
-    }
+}
 
-    .modal-content-invalid {
+.modal-content-invalid {
     background-color: red;
     color: #FFFFFF;
     font-weight: bold;
@@ -2832,9 +2938,9 @@
     border: 1px solid #888;
     border-radius: 5px;
     width: 55%;
-    }
+}
 
-    .modal-content-loginsuccess {
+.modal-content-loginsuccess {
     background-color: green;
     color: #FFFFFF;
     font-weight: bold;
@@ -2843,31 +2949,31 @@
     border: 1px solid #888;
     border-radius: 5px;
     width: 55%;
-    }
+}
     
-    .close {
+.close {
     color: #aaa;
     float: right;
     font-size: 35px;
     font-weight: bold;
-    }
+}
     
-    .close:hover,
-    .close:focus {
+.close:hover,
+.close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-    }
+}
     
-    .fade-in {
+.fade-in {
     opacity: 1;
     transition: opacity .8s ease-in;
-    }
+}
     
-    .fade-out {
+.fade-out {
     opacity: 0;
     transition: opacity .8s ease-out;
-    }
+}
 }
 
 @keyframes blinklogin {

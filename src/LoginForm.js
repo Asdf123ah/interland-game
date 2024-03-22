@@ -50,9 +50,9 @@ function LoginForm() {
     };
 
     return (
-      <div className="form-container">
+      <>
         <form onSubmit={handleSubmit}>
-          <div>
+          <div className="form-container">
             <label htmlFor="email" className="label-email">
               Enter your Email:
             </label>
@@ -95,7 +95,7 @@ function LoginForm() {
             </b>
           </u>
         </p>
-      </div>
+      </>
     );
   };
 
@@ -138,70 +138,72 @@ function LoginForm() {
     };
 
     return (
-      <form className="form-container" onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name" className="label-name">
-            Name:
-          </label>
-          <input
-            type="text"
-            id="name"
-            placeholder={"Enter your name"}
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="input-style-name"
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="birthDate" className="label-age">
-            Birth Date:
-          </label>
-          <input
-            type="date"
-            id="birthDate"
-            value={birthDate}
-            onChange={(e) => setBirthDate(e.target.value)}
-            className="input-style-age"
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="email" className="label-regEmail">
-            Email:
-          </label>
-          <input
-            type="email"
-            id="email"
-            placeholder={"Enter your email"}
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="input-style-regEmail"
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="regPassword" className="label-regPass">
-            Password:
-          </label>
-          <input
-            type="password"
-            id="regPassword"
-            value={password}
-            placeholder={"Enter your password"}
-            onChange={(e) => setPassword(e.target.value)}
-            className="input-style-regPass"
-            required
-          />
-        </div>
-        <button
-          className="start-button-style-login"
-          type="submit"
-          onClick={handleSubmit}
-        >
-          Register
-        </button>
-      </form>
+      <>
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label htmlFor="name" className="label-name">
+              Name:
+            </label>
+            <input
+              type="text"
+              id="name"
+              placeholder={"Enter your name"}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="input-style-name"
+              required
+            />
+            <div>
+              <label htmlFor="birthDate" className="label-age">
+                Birth Date:
+              </label>
+              <input
+                type="date"
+                id="birthDate"
+                value={birthDate}
+                onChange={(e) => setBirthDate(e.target.value)}
+                className="input-style-age"
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="email" className="label-regEmail">
+                Email:
+              </label>
+              <input
+                type="email"
+                id="email"
+                placeholder={"Enter your email"}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="input-style-regEmail"
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="regPassword" className="label-regPass">
+                Password:
+              </label>
+              <input
+                type="password"
+                id="regPassword"
+                value={password}
+                placeholder={"Enter your password"}
+                onChange={(e) => setPassword(e.target.value)}
+                className="input-style-regPass"
+                required
+              />
+            </div>
+            <button
+              className="start-button-style-login"
+              type="submit"
+              onClick={handleSubmit}
+            >
+              Register
+            </button>
+          </div>
+        </form>
+      </>
     );
   };
 
@@ -245,7 +247,6 @@ function LoginForm() {
           >
             CONTACT
           </button>
-
         </div>
         <img
           src={giantSycuresImage}
