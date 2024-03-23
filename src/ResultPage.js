@@ -152,57 +152,126 @@ function ResultPage() {
     question10,
   ]);
 
-  console.log("Questions1: ", question1);
-  console.log("Questions2: ", question2);
-  console.log("Questions3: ", question3);
-  console.log("Questions4: ", question4);
-  console.log("Questions5: ", question5);
-  console.log("Questions6: ", question6);
-  console.log("Questions7: ", question7);
-  console.log("Questions8: ", question8);
-  console.log("Questions9: ", question9);
-  console.log("Questions10: ", question10);
-
-
   useEffect(() => {
     console.log("Category in ResultPage:", category);
     updateScoreTime();
   }, [category, updateScoreTime]);
 
-  const getQuestionLabel = (questionNumber) => {
-    switch (questionNumber) {
-      case 1:
-        return "Computer Performance";
-      case 2:
-        return "Wifi Connectivity Issues";
-      case 3:
-        return "Web Browser Problems";
-      case 4:
-        return "Desktop and Taskbar Issues";
-      case 5:
-        return "Mobile Wifi Connectivity";
-      case 6:
-        return "Mobile Data Recovery";
-      case 7:
-        return "Mobile App Performance";
-      case 8:
-        return "Mobile Battery Life";
-      case 9:
-        return "Mobile App Crashes";
-      case 10:
-        return "File Recovery";
+  const getQuestionLabel = (questionNumber, category) => {
+    switch (category) {
+      case "basic computer and mobile skill":
+        switch (questionNumber) {
+          case 1:
+            return "Computer Performance";
+          case 2:
+            return "Wifi Connectivity Issues";
+          case 3:
+            return "Web Browser Problems";
+          case 4:
+            return "Desktop and Taskbar Issues";
+          case 5:
+            return "Mobile Wifi Connectivity";
+          case 6:
+            return "Mobile Data Recovery";
+          case 7:
+            return "Mobile App Performance";
+          case 8:
+            return "Mobile Battery Life";
+          case 9:
+            return "Mobile App Crashes";
+          case 10:
+            return "File Recovery";
+          default:
+            return "";
+        }
+      case "Internet Skill":
+        switch (questionNumber) {
+          case 1:
+            return "Phishing Awareness";
+          case 2:
+            return "Computer Security";
+          case 3:
+            return "Scam Awareness";
+          case 4:
+            return "Software Piracy Awareness";
+          case 5:
+            return "Password Security";
+          case 6:
+            return "Online Shopping Awareness";
+          case 7:
+            return "Online Advertisement Awareness";
+          case 8:
+            return "Website Credibility Evaluation";
+          case 9:
+            return "Internet Connectivity Concerns";
+          case 10:
+            return "Data Breach";
+          default:
+            return "";
+        }
+      case "Communication Skill":
+        switch (questionNumber) {
+          case 1:
+            return "Document Security";
+          case 2:
+            return "Email Etiquette";
+          case 3:
+            return "Email Security";
+          case 4:
+            return "Social Media Etiquette";
+          case 5:
+            return "Email Management";
+          case 6:
+            return "Communication Tool Selection";
+          case 7:
+            return "Social Media Strategy";
+          case 8:
+            return "Professional File Sharing";
+          case 9:
+            return "Collaboration Tool Selection";
+          case 10:
+            return "Assessing Reliability";
+          default:
+            return "";
+        }
+      case "Information Literacy Skill":
+        switch (questionNumber) {
+          case 1:
+            return "Assessng Article Credibility";
+          case 2:
+            return "Evaluating Post Reliability";
+          case 3:
+            return "Assessing Credibility";
+          case 4:
+            return "Assessing Reliability";
+          case 5:
+            return "Evaluating Information Sources";
+          case 6:
+            return "Determining Credibility";
+          case 7:
+            return "Accuracy Verification";
+          case 8:
+            return "Learning Techniques";
+          case 9:
+            return "Determining Reliability";
+          case 10:
+            return "Search Strategy";
+          default:
+            return "";
+        }
       default:
         return "";
     }
   };
-  
 
   const incorrectQuestionIndex = isCorrectQuestionsArray.findIndex(
     (isCorrect) => !isCorrect
   );
 
-  const incorrectQuestionLabel = getQuestionLabel(incorrectQuestionIndex);
-
+  const incorrectQuestionLabel = getQuestionLabel(
+    incorrectQuestionIndex + 1,
+    category
+  );
 
   return (
     <div className="containerResultPage">
@@ -224,18 +293,19 @@ function ResultPage() {
             </div>
             <p className="headerTextResultPage">YOUR TIME:</p>
             <div className="timeBoxResultPage">{time} seconds</div>
-
           </div>
           <div className="column">
             <div className="messageResultPage">
               <p>Message:</p>
-              {isCorrectQuestionsArray.map((isCorrect, index) => (
-                !isCorrect && (
-                  <div  className='messageResultPageMessage' key={index}>
-                    You need to improve or focus on {getQuestionLabel(index + 1)}
+              <p>You need improvement in terms of:</p>
+              {isCorrectQuestionsArray.map((isCorrect, index) =>
+                !isCorrect ? (
+                  <div className="messageResultPageMessage" key={index}>
+                    {" "}
+                    {getQuestionLabel(index + 1, category)}
                   </div>
-                )
-              ))}
+                ) : null
+              )}
             </div>
           </div>
           {showBackModal && (
