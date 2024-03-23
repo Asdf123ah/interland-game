@@ -1,149 +1,3 @@
-.containerResultPage {
-    background-color: #84BCC8;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-.sycuresLogoGameResultPage {
-    position: absolute;
-    height: auto;
-    width: 28%;
-    top: 0%;
-    right: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.resultBoxResultPageBG {
-    position: relative;
-    background-color: #FFFFFF ;
-    width: 100%;
-    height: 55%;
-    margin-top: 17%;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    overflow: visible;
-}
-
-.resultBoxResultPage {
-    position: relative;
-    background-color: rgba(255, 255, 255, 1);
-    border-radius: 50px;
-    text-align: center;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
-    width: 70%;
-    height: 115%;
-    margin-top: 0%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.column {
-    flex: 1;
-    padding: 30px; 
-}
-
-.headerTextResultPage {
-    font-size: 3.5rem;
-    font-weight: bold;
-    margin-top: 0rem;
-    margin-bottom: 3rem;
-    color: #1F144B;
-    font-family: 'Jockey One';
-}
-
-.scoreBoxResultPage {
-    background-color: #1F144B;
-    color: white;
-    width: 100%;
-    padding: 50px 10px;
-    font-size: 3rem;
-    font-weight: bold;
-    font-family: 'Jockey One';
-    border-radius: 10px;
-    margin-top: -1rem;
-    margin-bottom: 2rem;
-}
-
-.timeBoxResultPage {
-    background-color: #1F144B;
-    color: white;
-    width: 100%;
-    padding: 50px 10px;
-    font-size: 3rem;
-    font-weight: bold;
-    font-family: 'Jockey One';
-    border-radius: 10px;
-    margin-left: 0rem;
-    margin-top: -1rem;
-    margin-bottom: 1rem;
-}
-
-.messageResultPage {
-    position: relative;
-    background-color: #1F144B;
-    color: white;
-    width: 100%;
-    height: 100%;
-    font-size: 3rem;
-    font-weight: bold;
-    font-family: 'Jockey One';
-    border-radius: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: auto;
-}
-
-.messageResultPage p {
-    position: absolute;
-    color: white;
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: center;
-    font-family: 'Jockey One';
-    top: 0%;
-    
-}
-
-.messageResultPageMessage {
-    position: relative;
-    width: 90%;
-    height: auto;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-family: 'Jockey One';
-    top: 10%;
-    margin-top: 3%;
-    
-}
-
-.backButtonResultPage {
-    position: absolute;
-    top: 2%;
-    left: 2%;
-    width: 6.2%;
-    height: 11%;
-    background: url("./Photos/BackButtonImage.jpg");
-    background-size: cover;
-    cursor: pointer;
-    border: none;
-    transition: transform .4s ease;
-}
-
-.backButtonResultPage:hover{
-    transform: scale(1.1); 
-    filter: brightness(70%);
-}
-
 /* Styles for screens(xs) */
 @media screen and (max-width: 639px) {
 .containerResultPage {
@@ -255,14 +109,13 @@
 }
 
 .messageResultPage p {
-    position: absolute;
+    position: relative;
     color: white;
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
     font-family: 'Jockey One';
     top: 0%;
-    
 }
 
 .messageResultPageMessage {
@@ -270,12 +123,11 @@
     width: 90%;
     height: auto;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
     font-family: 'Jockey One';
-    top: 10%;
+    top: 0%;
     margin-top: 3%;
-    
 }
 
 .backButtonResultPage {
@@ -295,4 +147,757 @@
     transform: scale(1.1); 
     filter: brightness(70%);
 } 
+}
+
+/* Styles for screens(sm) */
+@media screen and (min-width: 640px) {
+.containerResultPage {
+    background-color: #84BCC8;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.sycuresLogoGameResultPage {
+    position: absolute;
+    height: auto;
+    width: 55%;
+    top: 0%;
+    right: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.resultBoxResultPageBG {
+    position: relative;
+    background-color: #FFFFFF ;
+    width: 100%;
+    height: 55%;
+    margin-top: 17%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+}
+
+.resultBoxResultPage {
+    position: relative;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+    width: 90%;
+    height: 115%;
+    margin-top: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+}
+
+.column {
+    flex: 1;
+    padding: 30px; 
+}
+
+.headerTextResultPage {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 0%;
+    margin-bottom: 10%;
+    color: #1F144B;
+    font-family: 'Jockey One';
+}
+
+.scoreBoxResultPage {
+    background-color: #1F144B;
+    color: white;
+    width: 100%;
+    padding: 50px 10px;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Jockey One';
+    border-radius: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 2rem;
+}
+
+.timeBoxResultPage {
+    background-color: #1F144B;
+    color: white;
+    width: 100%;
+    padding: 50px 10px;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Jockey One';
+    border-radius: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+}
+
+.messageResultPage {
+    position: relative;
+    background-color: #1F144B;
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Jockey One';
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.messageResultPage p {
+    position: relative;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Jockey One';
+    top: 0%;
+}
+
+.messageResultPageMessage {
+    position: relative;
+    width: 90%;
+    height: auto;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: 'Jockey One';
+    top: 0%;
+    margin-top: 3%;
+}
+
+.backButtonResultPage {
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    width: 12vw;
+    height: 8vh;
+    background: url("./Photos/BackButtonImage.jpg");
+    background-size: cover;
+    cursor: pointer;
+    border: none;
+    transition: transform .4s ease;
+}
+
+.backButtonResultPage:hover{
+    transform: scale(1.1); 
+    filter: brightness(70%);
+} 
+}
+
+/* Styles for screens(md) */
+@media screen and (min-width: 768px) {
+.containerResultPage {
+    background-color: #84BCC8;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.sycuresLogoGameResultPage {
+    position: absolute;
+    height: auto;
+    width: 47%;
+    top: 0%;
+    right: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.resultBoxResultPageBG {
+    position: relative;
+    background-color: #FFFFFF ;
+    width: 100%;
+    height: 55%;
+    margin-top: 17%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+}
+
+.resultBoxResultPage {
+    position: relative;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+    width: 90%;
+    height: 115%;
+    margin-top: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+}
+
+.column {
+    flex: 1;
+    padding: 30px; 
+}
+
+.headerTextResultPage {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 0%;
+    margin-bottom: 10%;
+    color: #1F144B;
+    font-family: 'Jockey One';
+}
+
+.scoreBoxResultPage {
+    background-color: #1F144B;
+    color: white;
+    width: 85%;
+    padding: 40px 10px;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Jockey One';
+    border-radius: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 2rem;
+}
+
+.timeBoxResultPage {
+    background-color: #1F144B;
+    color: white;
+    width: 85%;
+    padding: 40px 10px;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Jockey One';
+    border-radius: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+}
+
+.messageResultPage {
+    position: relative;
+    background-color: #1F144B;
+    color: white;
+    width: 85%;
+    height: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Jockey One';
+    border-radius: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.messageResultPage p {
+    position: relative;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Jockey One';
+    top: 0%;
+}
+
+.messageResultPageMessage {
+    position: relative;
+    width: 90%;
+    height: auto;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Jockey One';
+    top: 0%;
+    margin-top: 3%;
+}
+
+.backButtonResultPage {
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    width: 12vw;
+    height: 9vh;
+    background: url("./Photos/BackButtonImage.jpg");
+    background-size: cover;
+    cursor: pointer;
+    border: none;
+    transition: transform .4s ease;
+}
+
+.backButtonResultPage:hover{
+    transform: scale(1.1); 
+    filter: brightness(70%);
+} 
+}
+
+/* Styles for screens(lg) */
+@media screen and (min-width: 1024px) {
+.containerResultPage {
+    background-color: #84BCC8;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.sycuresLogoGameResultPage {
+    position: absolute;
+    height: auto;
+    width: 38%;
+    top: 0%;
+    right: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.resultBoxResultPageBG {
+    position: relative;
+    background-color: #FFFFFF ;
+    width: 100%;
+    height: 55%;
+    margin-top: 17%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+}
+
+.resultBoxResultPage {
+    position: relative;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+    width: 80%;
+    height: 115%;
+    margin-top: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+}
+
+.column {
+    flex: 1;
+    padding: 30px; 
+}
+
+.headerTextResultPage {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 0%;
+    margin-bottom:8%;
+    color: #1F144B;
+    font-family: 'Jockey One';
+}
+
+.scoreBoxResultPage {
+    background-color: #1F144B;
+    color: white;
+    width: 85%;
+    padding: 40px 10px;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Jockey One';
+    border-radius: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 2rem;
+}
+
+.timeBoxResultPage {
+    background-color: #1F144B;
+    color: white;
+    width: 85%;
+    padding: 40px 10px;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Jockey One';
+    border-radius: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+}
+
+.messageResultPage {
+    position: relative;
+    background-color: #1F144B;
+    color: white;
+    width: 85%;
+    height: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Jockey One';
+    border-radius: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.messageResultPage p {
+    position: relative;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Jockey One';
+    top: 0%;
+}
+
+.messageResultPageMessage {
+    position: relative;
+    width: 90%;
+    height: auto;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Jockey One';
+    top: 0%;
+    margin-top: 3%;
+}
+
+.backButtonResultPage {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 10vw;
+    height: 10vh;
+    background: url("./Photos/BackButtonImage.jpg");
+    background-size: cover;
+    cursor: pointer;
+    border: none;
+    transition: transform .4s ease;
+}
+
+.backButtonResultPage:hover{
+    transform: scale(1.1); 
+    filter: brightness(70%);
+} 
+}
+
+/* Styles for screens(xl) */
+@media screen and (min-width: 1280px) {
+.containerResultPage {
+    background-color: #84BCC8;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.sycuresLogoGameResultPage {
+    position: absolute;
+    height: auto;
+    width: 33%;
+    top: 0%;
+    right: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.resultBoxResultPageBG {
+    position: relative;
+    background-color: #FFFFFF ;
+    width: 100%;
+    height: 55%;
+    margin-top: 17%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+}
+
+.resultBoxResultPage {
+    position: relative;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+    width: 70%;
+    height: 115%;
+    margin-top: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+}
+
+.column {
+    flex: 1;
+    padding: 30px; 
+}
+
+.headerTextResultPage {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-top: 0%;
+    margin-bottom: 7%;
+    color: #1F144B;
+    font-family: 'Jockey One';
+}
+
+.scoreBoxResultPage {
+    background-color: #1F144B;
+    color: white;
+    width: 85%;
+    padding: 40px 10px;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Jockey One';
+    border-radius: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 2rem;
+}
+
+.timeBoxResultPage {
+    background-color: #1F144B;
+    color: white;
+    width: 85%;
+    padding: 40px 10px;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Jockey One';
+    border-radius: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+}
+
+.messageResultPage {
+    position: relative;
+    background-color: #1F144B;
+    color: white;
+    width: 85%;
+    height: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Jockey One';
+    border-radius: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.messageResultPage p {
+    position: relative;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Jockey One';
+    top: 0%;
+}
+
+.messageResultPageMessage {
+    position: relative;
+    width: 90%;
+    height: auto;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Jockey One';
+    top: 0%;
+    margin-top: 3%;
+}
+
+.backButtonResultPage {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 8vw;
+    height: 10vh;
+    background: url("./Photos/BackButtonImage.jpg");
+    background-size: cover;
+    cursor: pointer;
+    border: none;
+    transition: transform .4s ease;
+}
+
+.backButtonResultPage:hover{
+    transform: scale(1.1); 
+    filter: brightness(70%);
+} 
+}
+
+/* Styles for screens(2xl) */
+@media screen and (min-width: 1536px) {
+.containerResultPage {
+    background-color: #84BCC8;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.sycuresLogoGameResultPage {
+    position: absolute;
+    height: auto;
+    width: 28%;
+    top: 0%;
+    right: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.resultBoxResultPageBG {
+    position: relative;
+    background-color: #FFFFFF ;
+    width: 100%;
+    height: 55%;
+    margin-top: 17%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+}
+
+.resultBoxResultPage {
+    position: relative;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+    width: 70%;
+    height: 115%;
+    margin-top: 0%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    flex: 1;
+    padding: 30px; 
+}
+
+.headerTextResultPage {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-top: 0rem;
+    margin-bottom: 3%;
+    color: #1F144B;
+    font-family: 'Jockey One';
+}
+
+.scoreBoxResultPage {
+    background-color: #1F144B;
+    color: white;
+    width: 75%;
+    padding: 60px 10px;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Jockey One';
+    border-radius: 10px;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+}
+
+.timeBoxResultPage {
+    background-color: #1F144B;
+    color: white;
+    width: 75%;
+    padding: 60px 10px;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Jockey One';
+    border-radius: 10px;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+}
+
+.messageResultPage {
+    position: relative;
+    background-color: #1F144B;
+    color: white;
+    width: 75%;
+    height: auto;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Jockey One';
+    border-radius: 10px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    margin-top: 2%;
+    padding: 0px 0px 40px 0px;
+}
+
+.messageResultPage p {
+    position: relative;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Jockey One';
+    margin-top: 2%;
+}
+
+.messageResultPageMessage {
+    position: relative;
+    width: 90%;
+    height: auto;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Jockey One';
+    top: 10%;
+    margin-top: 3%;
+    margin-bottom: 1%;
+}
+
+.backButtonResultPage {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 6.2%;
+    height: 11%;
+    background: url("./Photos/BackButtonImage.jpg");
+    background-size: cover;
+    cursor: pointer;
+    border: none;
+    transition: transform .4s ease;
+}
+
+.backButtonResultPage:hover{
+    transform: scale(1.1); 
+    filter: brightness(70%);
+}
 }
