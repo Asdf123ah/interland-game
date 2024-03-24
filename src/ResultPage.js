@@ -159,7 +159,7 @@ function ResultPage() {
 
   const getQuestionLabel = (questionNumber, category) => {
     switch (category) {
-      case "basic computer and mobile skill":
+      case "Basic Computer and Mobile Skill":
         switch (questionNumber) {
           case 1:
             return "Computer Performance";
