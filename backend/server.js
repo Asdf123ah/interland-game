@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const bcrypt = require("bcrypt");
-const { ObjectId } = require('mongodb'); // Import ObjectId from MongoDB
+const { ObjectId } = require('mongodb');
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -111,7 +111,7 @@ async function createUserStatus() {
         $unwind: "$categories"
       },
       {
-        $sort: { "categories.categoryName": 1 }
+        $sort: { "categories.category": 1 }
       },
       {
         $unwind: "$categories.categoryAttemptDetail"
@@ -133,7 +133,21 @@ async function createUserStatus() {
             ]
           },
           totalAttempts: "$categories.categoryAttempt",
-          totalQuestions: { $multiply: ["$categories.categoryAttempt", 10] }
+          totalQuestions: { $multiply: ["$categories.categoryAttempt", 10] },
+          totalTimeSpent: {
+            $sum: [
+              "$categories.categoryAttemptDetail.questionAttempts.question1Attempt.question1Time",
+              "$categories.categoryAttemptDetail.questionAttempts.question2Attempt.question2Time",
+              "$categories.categoryAttemptDetail.questionAttempts.question3Attempt.question3Time",
+              "$categories.categoryAttemptDetail.questionAttempts.question4Attempt.question4Time",
+              "$categories.categoryAttemptDetail.questionAttempts.question5Attempt.question5Time",
+              "$categories.categoryAttemptDetail.questionAttempts.question6Attempt.question6Time",
+              "$categories.categoryAttemptDetail.questionAttempts.question7Attempt.question7Time",
+              "$categories.categoryAttemptDetail.questionAttempts.question8Attempt.question8Time",
+              "$categories.categoryAttemptDetail.questionAttempts.question9Attempt.question9Time",
+              "$categories.categoryAttemptDetail.questionAttempts.question10Attempt.question10Time"
+            ]
+          }
         }
       },
       {
@@ -145,8 +159,10 @@ async function createUserStatus() {
           name: { $first: "$name" },
           totalAttempts: { $first: "$totalAttempts" },
           currCorrectAnswer: { $last: "$currCorrectAnswer" },
+          totalCorrectAnswers: { $sum: "$currCorrectAnswer" }, 
           prevAttemptsCorrect: { $push: "$currCorrectAnswer" },
-          categoryAttempt: { $first: "$categories.categoryAttempt" }
+          categoryAttempt: { $first: "$categories.categoryAttempt" },
+          totalTimeSpent: { $first: "$totalTimeSpent" }
         }
       },
       {
@@ -173,7 +189,14 @@ async function createUserStatus() {
               then: true,
               else: false
             }
-          }
+          },
+          averageTime: { $divide: ["$totalTimeSpent", "$totalAttempts"] } // Calculate average time per attempt
+        }
+      },
+      {
+        $addFields: {
+          averageScore: { $round: [{ $divide: ["$totalCorrectAnswers", "$totalAttempts"] }, 2] }, // Round average score to 2 decimal places
+          averageTime: { $round: ["$averageTime", 2] } // Round average time per attempt to 2 decimal places
         }
       },
       {
@@ -181,13 +204,15 @@ async function createUserStatus() {
           _id: "$_id.userId",
           name: { $first: "$name" },
           totalAttempts: { $sum: "$totalAttempts" }, 
+          overallAverageScore: { $avg: "$averageScore" }, // Calculate overall average score
+          overallAverageTime: { $avg: "$averageTime" }, // Calculate overall average time per attempt
           categories: {
             $push: {
               categoryName: "$_id.category",
               categoryAttempt: "$categoryAttempt",
-              currCorrectAnswer: "$currCorrectAnswer",
-              prevCorrectAnswer1: "$prevCorrectAnswer1",
-              isWheelSpinning: "$isWheelSpinning"
+              isWheelSpinning: "$isWheelSpinning",
+              averageScore: "$averageScore",
+              averageTime: "$averageTime" // Include average time per attempt in each category
             }
           }
         }
@@ -197,6 +222,8 @@ async function createUserStatus() {
           _id: 1,
           name: 1,
           totalAttempts: 1,
+          overallAverageScore: { $round: ["$overallAverageScore", 2] }, // Round overall average score to 2 decimal places
+          overallAverageTime: { $round: ["$overallAverageTime", 2] }, // Round overall average time per attempt to 2 decimal places
           categories: {
             $switch: {
               branches: [
@@ -205,12 +232,15 @@ async function createUserStatus() {
                 { case: { $eq: ["$categories.categoryName", "Communication Skill"] }, then: "$categories" },
                 { case: { $eq: ["$categories.categoryName", "Information Literacy Skill"] }, then: "$categories" }
               ],
-              default: "$categories" // Add a default branch to handle unmatched category names
+              default: "$categories" 
             }
           }
         }
       }
     ];
+    
+    
+       
     
 
     // Run aggregation pipeline
