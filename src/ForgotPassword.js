@@ -10,7 +10,7 @@ function ForgotPassword() {
   const [resetSuccess, setResetSuccess] = useState(false);
   const [showModalPassChangeSuccess, setShowModalPassChangeSuccess] =
     useState(false);
-  const [emailNotFound, setEmailNotFound] = useState(false); // New state variable
+  const [emailNotFound, setEmailNotFound] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -26,11 +26,11 @@ function ForgotPassword() {
         console.log("User ID:", data.userId);
         setResetSuccess(true);
       } else {
-        setEmailNotFound(true); // Set email not found state
+        setEmailNotFound(true);
       }
     } catch (error) {
       console.error("Error resetting password:", error);
-      setEmailNotFound(true); // Set email not found state in case of error
+      setEmailNotFound(true);
     }
   };
 
@@ -109,7 +109,7 @@ function ForgotPassword() {
             >
               &times;
             </span>
-            <p>Password successfully updated.</p>
+            <p>Password has been updated successfully.</p>
           </div>
         </div>
       )}
@@ -119,7 +119,7 @@ function ForgotPassword() {
             <span className="close" onClick={() => setEmailNotFound(false)}>
               &times;
             </span>
-            <p>Email not found. Try again.</p>
+            <p>Email doesn't exist. Please try again.</p>
           </div>
         </div>
       )}

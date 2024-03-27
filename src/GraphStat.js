@@ -21,7 +21,6 @@ useEffect(() => {
         // Extract win rate from the response
         const winRateBasic = parseFloat(basicComputerMobileSkillResponse.data.winRate);
 
-
         // Map the win rate value to the range 0% to 100%
         const mappedWinRateBasic = (winRateBasic - 0) * (100 - 0) / (100 - 0) + 0;
         // Map the win rate to the range from 50% to 0%
@@ -29,7 +28,6 @@ useEffect(() => {
 
         // Set the state variables with the mapped win rate
         setPointACy(mappedPointACy);
-
 
       } catch (error) {
         console.error('Error fetching win rates:', error);
@@ -48,7 +46,6 @@ useEffect(() => {
         // Extract win rate from the response
         const winRateInternet = parseFloat(internetSkillResponse.data.winRate);
 
-
         // Map the win rate value to the range 0% to 100%
         const mappedWinRateInternet = (winRateInternet - 0) * (100 - 0) / (100 - 0) + 0;
         // Map the win rate to the range from 50% to 0%
@@ -56,7 +53,6 @@ useEffect(() => {
 
         // Set the state variables with the mapped win rate
         setPointBCx(mappedPointBCx);
-
 
       } catch (error) {
         console.error('Error fetching win rates:', error);
@@ -74,7 +70,6 @@ useEffect(() => {
         // Extract win rate from the response
         const winRateCommunication = parseFloat(communicationSkillResponse.data.winRate);
 
-
         // Map the win rate value to the range 0% to 100%
         const mappedWinRateCommunication = (winRateCommunication - 0) * (100 - 0) / (100 - 0) + 0;
         // Map the win rate to the range from 50% to 0%
@@ -82,7 +77,6 @@ useEffect(() => {
 
         // Set the state variables with the mapped win rate
         setPointCCy(mappedPointCCy);
-
 
       } catch (error) {
         console.error('Error fetching win rates:', error);
@@ -100,7 +94,6 @@ useEffect(() => {
         // Extract win rate from the response
         const winRateInformation = parseFloat(informationLiteracySkillResponse.data.winRate);
 
-
         // Map the win rate value to the range 0% to 100%
         const mappedWinRateInformation = (winRateInformation - 0) * (100 - 0) / (100 - 0) + 0;
         // Map the win rate to the range from 50% to 0%
@@ -108,7 +101,6 @@ useEffect(() => {
 
         // Set the state variables with the mapped win rate
         setPointDCx(mappedPointDCx);
-
 
       } catch (error) {
         console.error('Error fetching win rates:', error);

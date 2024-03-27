@@ -3,14 +3,12 @@ import { useNavigate, useParams } from "react-router-dom";
 import "./CategorySelection.css";
 import { IoStatsChart } from "react-icons/io5";
 import axios from "axios";
-import CongratulationModal from "./Modal/CongratulationModal";
 import BackModal from "./Modal/BackModal";
-import sycuresLogo from './Photos/gamePictureLogo.png';
+import sycuresLogo from "./Photos/gamePictureLogo.png";
 
 function CategorySelection() {
   const { userId } = useParams();
   const navigate = useNavigate();
-  const [showCongratulations, setShowCongratulations] = useState(false);
   const [showBackModal, setShowBackModal] = useState(false);
 
   const categories = [
@@ -37,10 +35,6 @@ function CategorySelection() {
     }
   };
 
-  const handleCloseCongratulations = () => {
-    setShowCongratulations(false);
-  };
-
   const handleBackButtonClick = () => {
     setShowBackModal(true);
   };
@@ -64,44 +58,52 @@ function CategorySelection() {
         className="backButtonCategorySelection"
         onClick={handleBackButtonClick}
       />
-      <img className="sycuresLogoGameCategorySelection" src={sycuresLogo} alt="Sycures Logo" />
+      <img
+        className="sycuresLogoGameCategorySelection"
+        src={sycuresLogo}
+        alt="Sycures Logo"
+      />
       <div className="boxCategorySelectionBG">
-      <div className="boxCategorySelection">
-        <div className="popupInstruction">
-          <p>Please choose one digital skill to start the game.</p> 
-        </div>
-        <div className="buttons-container">
-          <div className="rowCategorySelection">
-            {categories.slice(0, 2).map((category) => (
-              <button
-                key={category}
-                className="buttonCategorySelection"
-                onClick={() => handleCategoryClick(category)}
-              >
-                {category}
-              </button>
-            ))}
+        <div className="boxCategorySelection">
+          <div className="popupInstruction">
+            <p>Please choose one digital skill to start the game.</p>
           </div>
-          <div className="rowCategorySelection">
-            {categories.slice(2, 4).map((category) => (
-              <button
-                key={category}
-                className="buttonCategorySelection"
-                onClick={() => handleCategoryClick(category)}
-              >
-                {category}
-              </button>
-            ))}
+          <div className="buttons-container">
+            <div className="rowCategorySelection">
+              {categories.slice(0, 2).map((category) => (
+                <button
+                  key={category}
+                  className="buttonCategorySelection"
+                  onClick={() => handleCategoryClick(category)}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+            <div className="rowCategorySelection">
+              {categories.slice(2, 4).map((category) => (
+                <button
+                  key={category}
+                  className="buttonCategorySelection"
+                  onClick={() => handleCategoryClick(category)}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
       </div>
       <button className="stats-button" onClick={handleStatsButtonClick}>
         <IoStatsChart className="stat-chart" />
-      STATS
+        STATS
       </button>
-      {showCongratulations && (<CongratulationModal onClose={handleCloseCongratulations} />)}
-      {showBackModal && (<BackModal onProceed={handleProceedToLoginForm} onClose={handleCloseBackModal}/>)}
+      {showBackModal && (
+        <BackModal
+          onProceed={handleProceedToLoginForm}
+          onClose={handleCloseBackModal}
+        />
+      )}
     </div>
   );
 }

@@ -333,7 +333,7 @@ function LoginForm() {
             <span className="close" onClick={() => setShowModalInvalid(false)}>
               &times;
             </span>
-            <p>Invalid email and password. Try again.</p>
+            <p>Invalid email and password. Please try again.</p>
           </div>
         </div>
       )}
@@ -346,7 +346,7 @@ function LoginForm() {
             >
               &times;
             </span>
-            <p>Login successful.</p>
+            <p>You have successfully logged in.</p>
           </div>
         </div>
       )}

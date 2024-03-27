@@ -64,7 +64,7 @@ function StatisticComponent() {
           throw new Error("Failed to fetch user data");
         }
         const userData = await response.json();
-        setUserName(userData.name); 
+        setUserName(userData.name);
       } catch (error) {
         console.error("Error fetching user data:", error);
       }
