@@ -50,7 +50,11 @@ const CommunicationSkill = () => {
   const [hasClicked, setHasClicked] = useState(false);
   const [nextQuestion, setNextQuestion] = useState({ text: '', choices: [] });
   const [displayedQuestions, setDisplayedQuestions] = useState([]); 
-  
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const handleNextQuestion = () => {
+    setCurrentQuestion(current => current + 1);
+  };
+
   useEffect(() => {
     if (hasClicked) {
       const remainingQuestions = questions.filter(
@@ -60,6 +64,7 @@ const CommunicationSkill = () => {
         navigate(`/result/${userId}/`, { state: {question1, question2, question3, question4, question5, question6, question7, question8, question9, question10, isCorrectQuestions, adjustedScore, time, totalQuestions, category, question1Time, question2Time, question3Time, question4Time, question5Time, question6Time, question7Time, question8Time, question9Time, question10Time}});
       } else {
         setNextQuestion(getNextQuestion());
+        handleNextQuestion();
       }
     }
   }, [score, hasClicked, displayedQuestions]);
@@ -789,8 +794,8 @@ const CommunicationSkill = () => {
       )}
       <div className="hexagonScore">
         <div className="scoreText">
-          Score: <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{score}/{totalQuestions}
+          Question: <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{currentQuestion}/{totalQuestions}
         </div>
       </div>
       <div className="hexagonTime">

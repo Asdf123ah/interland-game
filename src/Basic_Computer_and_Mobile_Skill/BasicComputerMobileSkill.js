@@ -12,20 +12,16 @@ const BasicComputerMobileSkill = () => {
   const category = 'Basic Computer and Mobile Skill';
   const [showBackModal, setShowBackModal] = useState(false);
   const [question1Time, setQuestion1Time] = useState(0); const [question2Time, setQuestion2Time] = useState(0); const [question3Time, setQuestion3Time] = useState(0); const [question4Time, setQuestion4Time] = useState(0); const [question5Time, setQuestion5Time] = useState(0); const [question6Time, setQuestion6Time] = useState(0); const [question7Time, setQuestion7Time] = useState(0); const [question8Time, setQuestion8Time] = useState(0); const [question9Time, setQuestion9Time] = useState(0); const [question10Time, setQuestion10Time] = useState(0);
-
   const handleBackButtonClick = () => {
     setShowBackModal(true);
   };
-
   const handleCloseBackModal = () => {
     setShowBackModal(false);
   };
-
   const handleProceedToCategorySelection = () => {
     handleCloseBackModal();
     navigate(`/category-selection/${userId}`);
   };
-
   let currentIndex = 0;
   const getNextQuestion = () => {
     const remainingQuestions = questions.filter(
@@ -40,8 +36,6 @@ const BasicComputerMobileSkill = () => {
   
     return selectedQuestion;
   };
-  
-
   const [score, setScore] = useState(0);
   const [robotPosition, setRobotPosition] = useState({ left: 43, top: 1, moved: false });
   const [showPopup, setShowPopup] = useState(true);
@@ -50,6 +44,33 @@ const BasicComputerMobileSkill = () => {
   const [hasClicked, setHasClicked] = useState(false);
   const [nextQuestion, setNextQuestion] = useState({ text: '', choices: [] });
   const [displayedQuestions, setDisplayedQuestions] = useState([]); 
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const handleNextQuestion = () => {
+    setCurrentQuestion(current => current + 1);
+  };
+  const handlePopupClick = () => {
+    setHasClicked(true);
+    setShowPopup(false);
+    setHexagonVisibility({
+      hexagon1: true, hexagon2: true, hexagon3: true,
+    });
+  };
+  const [correctAnswer, setCorrectAnswer] = useState(null);
+  const [wrongAnswer, setWrongAnswer] = useState(null); 
+  const [hideHexagon1Text,  setHideHexagon1Text ] = useState(false); const [hideHexagon2Text,  setHideHexagon2Text ] = useState(false); const [hideHexagon3Text,  setHideHexagon3Text ] = useState(false); const [hideHexagon4Text,  setHideHexagon4Text ] = useState(false); const [hideHexagon5Text,  setHideHexagon5Text ] = useState(false); const [hideHexagon6Text,  setHideHexagon6Text ] = useState(false); const [hideHexagon7Text,  setHideHexagon7Text ] = useState(false); const [hideHexagon8Text,  setHideHexagon8Text ] = useState(false); const [hideHexagon9Text,  setHideHexagon9Text ] = useState(false); const [hideHexagon10Text, setHideHexagon10Text] = useState(false);
+  const [hideHexagon11Text, setHideHexagon11Text] = useState(false); const [hideHexagon12Text, setHideHexagon12Text] = useState(false); const [hideHexagon13Text, setHideHexagon13Text] = useState(false); const [hideHexagon14Text, setHideHexagon14Text] = useState(false); const [hideHexagon15Text, setHideHexagon15Text] = useState(false); const [hideHexagon16Text, setHideHexagon16Text] = useState(false); const [hideHexagon17Text, setHideHexagon17Text] = useState(false); const [hideHexagon18Text, setHideHexagon18Text] = useState(false); const [hideHexagon19Text, setHideHexagon19Text] = useState(false); const [hideHexagon20Text, setHideHexagon20Text] = useState(false); 
+  const [hideHexagon21Text, setHideHexagon21Text] = useState(false); const [hideHexagon22Text, setHideHexagon22Text] = useState(false); const [hideHexagon23Text, setHideHexagon23Text] = useState(false); const [hideHexagon24Text, setHideHexagon24Text] = useState(false); const [hideHexagon25Text, setHideHexagon25Text] = useState(false); const [hideHexagon26Text, setHideHexagon26Text] = useState(false); const [hideHexagon27Text, setHideHexagon27Text] = useState(false); const [hideHexagon28Text, setHideHexagon28Text] = useState(false); const [hideHexagon29Text, setHideHexagon29Text] = useState(false); const [hideHexagon30Text, setHideHexagon30Text] = useState(false);
+  const [hideHexagon31Text, setHideHexagon31Text] = useState(false); const [hideHexagon32Text, setHideHexagon32Text] = useState(false); const [hideHexagon33Text, setHideHexagon33Text] = useState(false); const [hideHexagon34Text, setHideHexagon34Text] = useState(false); const [hideHexagon35Text, setHideHexagon35Text] = useState(false); const [hideHexagon36Text, setHideHexagon36Text] = useState(false); const [hideHexagon37Text, setHideHexagon37Text] = useState(false); const [hideHexagon38Text, setHideHexagon38Text] = useState(false); const [hideHexagon39Text, setHideHexagon39Text] = useState(false); const [hideHexagon40Text, setHideHexagon40Text] = useState(false);
+  const minutes = Math.floor(time / 60);
+  const seconds = time % 60;
+  const formattedTime = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+  const totalQuestions = questions.length;
+  const adjustedScore = score;
+  const [isCorrectQuestions, setIsCorrectQuestions] = useState({ question1: false, question2: false, question3: false, question4: false, question5: false, question6: false, question7: false, question8: false, question9: false, question10: false,});
+  const question1 = isCorrectQuestions[0]; const question2 = isCorrectQuestions[1]; const question3 = isCorrectQuestions[2]; const question4 = isCorrectQuestions[3]; const question5 = isCorrectQuestions[4]; const question6 = isCorrectQuestions[5]; const question7 = isCorrectQuestions[6]; const question8 = isCorrectQuestions[7]; const question9 = isCorrectQuestions[8]; const question10 = isCorrectQuestions[9];
+  const [clickedSets, setClickedSets] = useState({
+    set2: false, set3: false, set4: false, set5: false, set6: false, set7: false, set8: false, set9: false, set10: false,
+  });
   
   useEffect(() => {
     if (hasClicked) {
@@ -60,6 +81,7 @@ const BasicComputerMobileSkill = () => {
         navigate(`/result/${userId}/`, { state: {question1, question2, question3, question4, question5, question6, question7, question8, question9, question10, isCorrectQuestions, adjustedScore, time, totalQuestions, category, question1Time, question2Time, question3Time, question4Time, question5Time, question6Time, question7Time, question8Time, question9Time, question10Time}});
       } else {
         setNextQuestion(getNextQuestion());
+        handleNextQuestion();
       }
     }
   }, [score, hasClicked, displayedQuestions]);
@@ -120,31 +142,7 @@ const BasicComputerMobileSkill = () => {
     }
   }, [score, hasClicked, time, question1Time, question2Time, question3Time, question4Time, question5Time, question6Time, question7Time, question8Time, question9Time, question10Time,]);
 
-  const handlePopupClick = () => {
-    setHasClicked(true);
-    setShowPopup(false);
-    setHexagonVisibility({
-      hexagon1: true, hexagon2: true, hexagon3: true,
-    });
-  };
 
-  const [correctAnswer, setCorrectAnswer] = useState(null);
-  const [wrongAnswer, setWrongAnswer] = useState(null); 
-  const [hideHexagon1Text,  setHideHexagon1Text ] = useState(false); const [hideHexagon2Text,  setHideHexagon2Text ] = useState(false); const [hideHexagon3Text,  setHideHexagon3Text ] = useState(false); const [hideHexagon4Text,  setHideHexagon4Text ] = useState(false); const [hideHexagon5Text,  setHideHexagon5Text ] = useState(false); const [hideHexagon6Text,  setHideHexagon6Text ] = useState(false); const [hideHexagon7Text,  setHideHexagon7Text ] = useState(false); const [hideHexagon8Text,  setHideHexagon8Text ] = useState(false); const [hideHexagon9Text,  setHideHexagon9Text ] = useState(false); const [hideHexagon10Text, setHideHexagon10Text] = useState(false);
-  const [hideHexagon11Text, setHideHexagon11Text] = useState(false); const [hideHexagon12Text, setHideHexagon12Text] = useState(false); const [hideHexagon13Text, setHideHexagon13Text] = useState(false); const [hideHexagon14Text, setHideHexagon14Text] = useState(false); const [hideHexagon15Text, setHideHexagon15Text] = useState(false); const [hideHexagon16Text, setHideHexagon16Text] = useState(false); const [hideHexagon17Text, setHideHexagon17Text] = useState(false); const [hideHexagon18Text, setHideHexagon18Text] = useState(false); const [hideHexagon19Text, setHideHexagon19Text] = useState(false); const [hideHexagon20Text, setHideHexagon20Text] = useState(false); 
-  const [hideHexagon21Text, setHideHexagon21Text] = useState(false); const [hideHexagon22Text, setHideHexagon22Text] = useState(false); const [hideHexagon23Text, setHideHexagon23Text] = useState(false); const [hideHexagon24Text, setHideHexagon24Text] = useState(false); const [hideHexagon25Text, setHideHexagon25Text] = useState(false); const [hideHexagon26Text, setHideHexagon26Text] = useState(false); const [hideHexagon27Text, setHideHexagon27Text] = useState(false); const [hideHexagon28Text, setHideHexagon28Text] = useState(false); const [hideHexagon29Text, setHideHexagon29Text] = useState(false); const [hideHexagon30Text, setHideHexagon30Text] = useState(false);
-  const [hideHexagon31Text, setHideHexagon31Text] = useState(false); const [hideHexagon32Text, setHideHexagon32Text] = useState(false); const [hideHexagon33Text, setHideHexagon33Text] = useState(false); const [hideHexagon34Text, setHideHexagon34Text] = useState(false); const [hideHexagon35Text, setHideHexagon35Text] = useState(false); const [hideHexagon36Text, setHideHexagon36Text] = useState(false); const [hideHexagon37Text, setHideHexagon37Text] = useState(false); const [hideHexagon38Text, setHideHexagon38Text] = useState(false); const [hideHexagon39Text, setHideHexagon39Text] = useState(false); const [hideHexagon40Text, setHideHexagon40Text] = useState(false);
-  const minutes = Math.floor(time / 60);
-  const seconds = time % 60;
-  const formattedTime = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-  const totalQuestions = questions.length;
-  const adjustedScore = score;
-  const [isCorrectQuestions, setIsCorrectQuestions] = useState({ question1: false, question2: false, question3: false, question4: false, question5: false, question6: false, question7: false, question8: false, question9: false, question10: false,});
-  const question1 = isCorrectQuestions[0]; const question2 = isCorrectQuestions[1]; const question3 = isCorrectQuestions[2]; const question4 = isCorrectQuestions[3]; const question5 = isCorrectQuestions[4]; const question6 = isCorrectQuestions[5]; const question7 = isCorrectQuestions[6]; const question8 = isCorrectQuestions[7]; const question9 = isCorrectQuestions[8]; const question10 = isCorrectQuestions[9];
-
-  const [clickedSets, setClickedSets] = useState({
-    set2: false, set3: false, set4: false, set5: false, set6: false, set7: false, set8: false, set9: false, set10: false,
-  });
   const handleHexagonClick = async (hexagonNumber, choiceIndex) => {
     let setKey;
     if (hexagonNumber >= 4 && hexagonNumber <= 6) {
@@ -789,8 +787,8 @@ const BasicComputerMobileSkill = () => {
       )}
       <div className="hexagonScore">
         <div className="scoreText">
-          Score: <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{score}/{totalQuestions}
+          Question: <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{currentQuestion}/{totalQuestions}
         </div>
       </div>
       <div className="hexagonTime">
