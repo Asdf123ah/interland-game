@@ -4,16 +4,16 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const bcrypt = require("bcrypt");
 const { ObjectId } = require('mongodb');
+require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 4000;
+const MONGODB_URI = process.env.MONGODB_URI;
 
 app.use(bodyParser.json());
 app.use(cors());
 
-mongoose.connect(
-  "mongodb+srv://clustergame001:clustergame001@clustergame.suvmi1j.mongodb.net/"
-);
+mongoose.connect(MONGODB_URI);
 
 const connection = mongoose.connection;
 connection.once("open", () => {
@@ -21,6 +21,7 @@ connection.once("open", () => {
 
   createUserStatus();
 });
+
 
 const userSchema = new mongoose.Schema({
   name: String,
