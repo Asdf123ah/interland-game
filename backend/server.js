@@ -3,8 +3,8 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const bcrypt = require("bcrypt");
-const { ObjectId } = require('mongodb');
-require('dotenv').config();
+const { ObjectId } = require("mongodb");
+require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -21,7 +21,6 @@ connection.once("open", () => {
 
   createUserStatus();
 });
-
 
 const userSchema = new mongoose.Schema({
   name: String,
@@ -109,29 +108,89 @@ async function createUserStatus() {
     // Convert raw data to categorized data
     const pipeline = [
       {
-        $unwind: "$categories"
+        $unwind: "$categories",
       },
       {
-        $sort: { "categories.category": 1 }
+        $sort: { "categories.category": 1 },
       },
       {
-        $unwind: "$categories.categoryAttemptDetail"
+        $unwind: "$categories.categoryAttemptDetail",
       },
       {
         $addFields: {
           currCorrectAnswer: {
             $sum: [
-              { $cond: ["$categories.categoryAttemptDetail.questionAttempts.question1Attempt.isCorrectQuestion1", 1, 0] },
-              { $cond: ["$categories.categoryAttemptDetail.questionAttempts.question2Attempt.isCorrectQuestion2", 1, 0] },
-              { $cond: ["$categories.categoryAttemptDetail.questionAttempts.question3Attempt.isCorrectQuestion3", 1, 0] },
-              { $cond: ["$categories.categoryAttemptDetail.questionAttempts.question4Attempt.isCorrectQuestion4", 1, 0] },
-              { $cond: ["$categories.categoryAttemptDetail.questionAttempts.question5Attempt.isCorrectQuestion5", 1, 0] },
-              { $cond: ["$categories.categoryAttemptDetail.questionAttempts.question6Attempt.isCorrectQuestion6", 1, 0] },
-              { $cond: ["$categories.categoryAttemptDetail.questionAttempts.question7Attempt.isCorrectQuestion7", 1, 0] },
-              { $cond: ["$categories.categoryAttemptDetail.questionAttempts.question8Attempt.isCorrectQuestion8", 1, 0] },
-              { $cond: ["$categories.categoryAttemptDetail.questionAttempts.question9Attempt.isCorrectQuestion9", 1, 0] },
-              { $cond: ["$categories.categoryAttemptDetail.questionAttempts.question10Attempt.isCorrectQuestion10", 1, 0] }
-            ]
+              {
+                $cond: [
+                  "$categories.categoryAttemptDetail.questionAttempts.question1Attempt.isCorrectQuestion1",
+                  1,
+                  0,
+                ],
+              },
+              {
+                $cond: [
+                  "$categories.categoryAttemptDetail.questionAttempts.question2Attempt.isCorrectQuestion2",
+                  1,
+                  0,
+                ],
+              },
+              {
+                $cond: [
+                  "$categories.categoryAttemptDetail.questionAttempts.question3Attempt.isCorrectQuestion3",
+                  1,
+                  0,
+                ],
+              },
+              {
+                $cond: [
+                  "$categories.categoryAttemptDetail.questionAttempts.question4Attempt.isCorrectQuestion4",
+                  1,
+                  0,
+                ],
+              },
+              {
+                $cond: [
+                  "$categories.categoryAttemptDetail.questionAttempts.question5Attempt.isCorrectQuestion5",
+                  1,
+                  0,
+                ],
+              },
+              {
+                $cond: [
+                  "$categories.categoryAttemptDetail.questionAttempts.question6Attempt.isCorrectQuestion6",
+                  1,
+                  0,
+                ],
+              },
+              {
+                $cond: [
+                  "$categories.categoryAttemptDetail.questionAttempts.question7Attempt.isCorrectQuestion7",
+                  1,
+                  0,
+                ],
+              },
+              {
+                $cond: [
+                  "$categories.categoryAttemptDetail.questionAttempts.question8Attempt.isCorrectQuestion8",
+                  1,
+                  0,
+                ],
+              },
+              {
+                $cond: [
+                  "$categories.categoryAttemptDetail.questionAttempts.question9Attempt.isCorrectQuestion9",
+                  1,
+                  0,
+                ],
+              },
+              {
+                $cond: [
+                  "$categories.categoryAttemptDetail.questionAttempts.question10Attempt.isCorrectQuestion10",
+                  1,
+                  0,
+                ],
+              },
+            ],
           },
           totalAttempts: "$categories.categoryAttempt",
           totalQuestions: { $multiply: ["$categories.categoryAttempt", 10] },
@@ -146,25 +205,25 @@ async function createUserStatus() {
               "$categories.categoryAttemptDetail.questionAttempts.question7Attempt.question7Time",
               "$categories.categoryAttemptDetail.questionAttempts.question8Attempt.question8Time",
               "$categories.categoryAttemptDetail.questionAttempts.question9Attempt.question9Time",
-              "$categories.categoryAttemptDetail.questionAttempts.question10Attempt.question10Time"
-            ]
-          }
-        }
+              "$categories.categoryAttemptDetail.questionAttempts.question10Attempt.question10Time",
+            ],
+          },
+        },
       },
       {
         $group: {
           _id: {
             userId: "$_id",
-            category: "$categories.category"
+            category: "$categories.category",
           },
           name: { $first: "$name" },
           totalAttempts: { $first: "$totalAttempts" },
           currCorrectAnswer: { $last: "$currCorrectAnswer" },
-          totalCorrectAnswers: { $sum: "$currCorrectAnswer" }, 
+          totalCorrectAnswers: { $sum: "$currCorrectAnswer" },
           prevAttemptsCorrect: { $push: "$currCorrectAnswer" },
           categoryAttempt: { $first: "$categories.categoryAttempt" },
-          totalTimeSpent: { $first: "$totalTimeSpent" }
-        }
+          totalTimeSpent: { $first: "$totalTimeSpent" },
+        },
       },
       {
         $addFields: {
@@ -172,10 +231,15 @@ async function createUserStatus() {
             $cond: {
               if: { $eq: ["$categoryAttempt", 1] },
               then: 0,
-              else: { $arrayElemAt: ["$prevAttemptsCorrect", { $subtract: [{ $size: "$prevAttemptsCorrect" }, 2] }] }
-            }
-          }
-        }
+              else: {
+                $arrayElemAt: [
+                  "$prevAttemptsCorrect",
+                  { $subtract: [{ $size: "$prevAttemptsCorrect" }, 2] },
+                ],
+              },
+            },
+          },
+        },
       },
       {
         $addFields: {
@@ -183,66 +247,123 @@ async function createUserStatus() {
             $cond: {
               if: {
                 $or: [
-                  { $and: [{ $eq: ["$categoryAttempt", 1] }, { $lt: ["$currCorrectAnswer", 7] }] },
-                  { $and: [{ $gte: ["$categoryAttempt", 2] }, { $lt: ["$currCorrectAnswer", 7] }, { $lte: ["$currCorrectAnswer", "$prevCorrectAnswer1"] }] }
-                ]
+                  {
+                    $and: [
+                      { $eq: ["$categoryAttempt", 1] },
+                      { $lt: ["$currCorrectAnswer", 7] },
+                      { $gte: ["$totalTimeSpent", 240] } // Check if totalTimeSpent is greater than or equal to 240
+                    ],
+                  },
+                  {
+                    $and: [
+                      { $gte: ["$categoryAttempt", 2] },
+                      { $lt: ["$currCorrectAnswer", 7] },
+                      { $lte: ["$currCorrectAnswer", "$prevCorrectAnswer1"] },
+                      { $gte: ["$totalTimeSpent", 240] } // Check if totalTimeSpent is greater than or equal to 240
+                    ],
+                  },
+                ],
               },
               then: true,
-              else: false
-            }
+              else: false,
+            },
           },
-          averageTime: { $divide: ["$totalTimeSpent", "$totalAttempts"] } // Calculate average time per attempt
-        }
+          averageTime: { $divide: ["$totalTimeSpent", "$totalAttempts"] },
+        },
       },
       {
         $addFields: {
-          averageScore: { $round: [{ $divide: ["$totalCorrectAnswers", "$totalAttempts"] }, 2] }, // Round average score to 2 decimal places
-          averageTime: { $round: ["$averageTime", 2] } // Round average time per attempt to 2 decimal places
-        }
+          averageScore: {
+            $round: [
+              { $divide: ["$totalCorrectAnswers", "$totalAttempts"] },
+              2,
+            ],
+          },
+          averageTime: { $round: ["$averageTime", 2] },
+        },
       },
       {
         $group: {
           _id: "$_id.userId",
           name: { $first: "$name" },
-          totalAttempts: { $sum: "$totalAttempts" }, 
-          overallAverageScore: { $avg: "$averageScore" }, // Calculate overall average score
-          overallAverageTime: { $avg: "$averageTime" }, // Calculate overall average time per attempt
+          totalAttempts: { $sum: "$totalAttempts" },
+          overallAverageScore: { $avg: "$averageScore" },
+          overallAverageTime: { $avg: "$averageTime" },
           categories: {
             $push: {
               categoryName: "$_id.category",
               categoryAttempt: "$categoryAttempt",
               isWheelSpinning: "$isWheelSpinning",
               averageScore: "$averageScore",
-              averageTime: "$averageTime" // Include average time per attempt in each category
-            }
-          }
-        }
+              averageTime: "$averageTime",
+            },
+          },
+        },
       },
       {
         $project: {
           _id: 1,
           name: 1,
           totalAttempts: 1,
-          overallAverageScore: { $round: ["$overallAverageScore", 2] }, // Round overall average score to 2 decimal places
-          overallAverageTime: { $round: ["$overallAverageTime", 2] }, // Round overall average time per attempt to 2 decimal places
+          overallAverageScore: { $round: ["$overallAverageScore", 2] },
+          overallAverageTime: { $round: ["$overallAverageTime", 2] },
+          isWheelSpinning: {
+            $cond: {
+              if: {
+                $gte: [
+                  {
+                    $size: {
+                      $filter: {
+                        input: "$categories",
+                        cond: { $eq: ["$$this.isWheelSpinning", true] },
+                      },
+                    },
+                  },
+                  2,
+                ],
+              },
+              then: true,
+              else: false,
+            },
+          },
           categories: {
             $switch: {
               branches: [
-                { case: { $eq: ["$categories.categoryName", "Basic Computer and Mobile Skill"] }, then: "$categories" },
-                { case: { $eq: ["$categories.categoryName", "Internet Skill"] }, then: "$categories" },
-                { case: { $eq: ["$categories.categoryName", "Communication Skill"] }, then: "$categories" },
-                { case: { $eq: ["$categories.categoryName", "Information Literacy Skill"] }, then: "$categories" }
+                {
+                  case: {
+                    $eq: [
+                      "$categories.categoryName",
+                      "Basic Computer and Mobile Skill",
+                    ],
+                  },
+                  then: "$categories",
+                },
+                {
+                  case: { $eq: ["$categories.categoryName", "Internet Skill"] },
+                  then: "$categories",
+                },
+                {
+                  case: {
+                    $eq: ["$categories.categoryName", "Communication Skill"],
+                  },
+                  then: "$categories",
+                },
+                {
+                  case: {
+                    $eq: [
+                      "$categories.categoryName",
+                      "Information Literacy Skill",
+                    ],
+                  },
+                  then: "$categories",
+                },
               ],
-              default: "$categories" 
-            }
-          }
-        }
-      }
+              default: "$categories",
+            },
+          },
+        },
+      },
     ];
-    
-    
-       
-    
 
     // Run aggregation pipeline
     const result = await User.aggregate(pipeline).allowDiskUse(true).exec();
@@ -288,7 +409,6 @@ async function createUserStatus() {
   }
 }
 
-
 // Define a new route to handle fetching user status data
 app.get("/user-status/:userId", async (req, res) => {
   try {
@@ -298,14 +418,15 @@ app.get("/user-status/:userId", async (req, res) => {
     const objectId = new ObjectId(userId);
 
     // Query the userStatus collection to retrieve data with the specified ID
-    const userStatusData = await connection.db.collection("userStatus").findOne({ _id: objectId });
+    const userStatusData = await connection.db
+      .collection("userStatus")
+      .findOne({ _id: objectId });
 
-    // Log the retrieved data 
+    // Log the retrieved data
     console.log(userStatusData);
 
     // Send the retrieved data as the response
     res.json(userStatusData);
-
   } catch (error) {
     console.error("Error fetching user status data:", error);
     res.status(500).json({ error: "Internal server error" });
